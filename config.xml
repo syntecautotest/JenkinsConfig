@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>jenkins.CLI</string>
+  </disabledAdministrativeMonitors>
+  <version>2.52</version>
+  <numExecutors>5</numExecutors>
+  <mode>EXCLUSIVE</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy">
+    <roleMap type="globalRoles">
+      <role name="BM" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>hudson.model.Computer.Connect</permission>
+          <permission>hudson.model.Run.Delete</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>jenkins.metrics.api.Metrics.View</permission>
+          <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.Computer.Build</permission>
+          <permission>hudson.model.View.Read</permission>
+          <permission>hudson.model.Hudson.RunScripts</permission>
+          <permission>hudson.model.Item.Cancel</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Computer.Disconnect</permission>
+          <permission>hudson.model.Item.Discover</permission>
+          <permission>hudson.model.Item.ViewStatus</permission>
+          <permission>hudson.model.Run.Update</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>schedulebm</sid>
+        </assignedSIDs>
+      </role>
+      <role name="Trigger" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>hudson.model.Item.Build</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>RemoteTrigger</sid>
+        </assignedSIDs>
+      </role>
+      <role name="VIEW" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
+          <permission>jenkins.metrics.api.Metrics.View</permission>
+          <permission>hudson.model.Item.Discover</permission>
+          <permission>hudson.model.Item.ViewStatus</permission>
+          <permission>hudson.model.View.Read</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>viewer</sid>
+        </assignedSIDs>
+      </role>
+      <role name="admin" pattern=".*">
+        <permissions>
+          <permission>hudson.model.View.Delete</permission>
+          <permission>hudson.model.Computer.Connect</permission>
+          <permission>hudson.model.Run.Delete</permission>
+          <permission>hudson.model.Hudson.UploadPlugins</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
+          <permission>hudson.model.Computer.Create</permission>
+          <permission>hudson.model.View.Configure</permission>
+          <permission>jenkins.metrics.api.Metrics.View</permission>
+          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Jobs</permission>
+          <permission>hudson.model.Hudson.ConfigureUpdateCenter</permission>
+          <permission>hudson.model.Computer.Build</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Hudson.Administer</permission>
+          <permission>hudson.model.Item.Cancel</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
+          <permission>hudson.model.Computer.Delete</permission>
+          <permission>jenkins.metrics.api.Metrics.HealthCheck</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>hudson.model.Item.Move</permission>
+          <permission>hudson.model.Item.Discover</permission>
+          <permission>hudson.model.Item.ViewStatus</permission>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
+          <permission>hudson.model.Run.Replay</permission>
+          <permission>jenkins.metrics.api.Metrics.ThreadDump</permission>
+          <permission>hudson.model.View.Read</permission>
+          <permission>hudson.model.Hudson.RunScripts</permission>
+          <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.Item.Delete</permission>
+          <permission>hudson.model.Computer.Configure</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
+          <permission>com.synopsys.arc.jenkins.plugins.ownership.OwnershipPlugin.Nodes</permission>
+          <permission>hudson.model.Computer.Disconnect</permission>
+          <permission>hudson.model.Run.Update</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>wppqqppq</sid>
+          <sid>autotest</sid>
+        </assignedSIDs>
+      </role>
+    </roleMap>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>false</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
+  <buildsDir>D:\Jenkins\${ITEM_FULL_NAME}\builds</buildsDir>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.5">
+    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
+  </markupFormatter>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>all</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+    <tech.andrey.jenkins.missioncontrol.MissionControlView plugin="mission-control-view@0.9.9">
+      <owner class="hudson" reference="../../.."/>
+      <name>Mission Control</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <fontSize>16</fontSize>
+      <buildQueueSize>10</buildQueueSize>
+      <buildHistorySize>16</buildHistorySize>
+      <useCondensedTables>false</useCondensedTables>
+      <hideBuildHistory>false</hideBuildHistory>
+      <hideJobs>false</hideJobs>
+      <hideBuildQueue>false</hideBuildQueue>
+      <hideNodes>false</hideNodes>
+      <statusButtonSize></statusButtonSize>
+      <layoutHeightRatio>6040</layoutHeightRatio>
+    </tech.andrey.jenkins.missioncontrol.MissionControlView>
+    <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.11+build.201701152243">
+      <owner class="hudson" reference="../../.."/>
+      <name>Monitor</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>CNC_10.116.24</string>
+        <string>CNC_10.116.x</string>
+        <string>CNC_trunk</string>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <recurse>false</recurse>
+      <title>Monitor</title>
+      <config>
+        <displayCommitters>true</displayCommitters>
+        <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByName"/>
+      </config>
+    </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.9.10">
+      <owner class="hudson" reference="../../.."/>
+      <name>Dashboard</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView/jobNames/comparator"/>
+        <string>CNC_10.116.24</string>
+        <string>CNC_10.116.x</string>
+        <string>CNC_trunk</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+      </columns>
+      <recurse>false</recurse>
+      <useCssStyle>false</useCssStyle>
+      <includeStdJobList>true</includeStdJobList>
+      <hideJenkinsPanels>false</hideJenkinsPanels>
+      <leftPortletWidth>50%</leftPortletWidth>
+      <rightPortletWidth>50%</rightPortletWidth>
+      <leftPortlets>
+        <hudson.plugins.view.dashboard.core.JobsPortlet>
+          <id>dashboard_portlet_14059</id>
+          <name>Jobs Grid</name>
+          <columnCount>3</columnCount>
+          <fillColumnFirst>true</fillColumnFirst>
+        </hudson.plugins.view.dashboard.core.JobsPortlet>
+        <hudson.plugins.view.dashboard.stats.StatJobs>
+          <id>dashboard_portlet_16715</id>
+          <name>Job statistics</name>
+        </hudson.plugins.view.dashboard.stats.StatJobs>
+      </leftPortlets>
+      <rightPortlets>
+        <hudson.plugins.projectstats.portlet.NumBuildsPortlet plugin="project-stats-plugin@0.4">
+          <id>dashboard_portlet_579</id>
+          <name>Project: Number of builds</name>
+        </hudson.plugins.projectstats.portlet.NumBuildsPortlet>
+        <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
+          <id>dashboard_portlet_19943</id>
+          <name>Unstable Jobs</name>
+          <showOnlyFailedJobs>false</showOnlyFailedJobs>
+          <recurse>false</recurse>
+        </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
+      </rightPortlets>
+      <topPortlets>
+        <hudson.plugins.view.dashboard.stats.StatBuilds>
+          <id>dashboard_portlet_24468</id>
+          <name>Build statistics</name>
+        </hudson.plugins.view.dashboard.stats.StatBuilds>
+        <hudson.plugins.view.dashboard.builds.LatestBuilds>
+          <id>dashboard_portlet_17645</id>
+          <name>Latest builds</name>
+          <numBuilds>10</numBuilds>
+        </hudson.plugins.view.dashboard.builds.LatestBuilds>
+      </topPortlets>
+      <bottomPortlets>
+        <hudson.plugins.view.dashboard.stats.StatSlaves>
+          <id>dashboard_portlet_12257</id>
+          <name>Slaves statistics</name>
+        </hudson.plugins.view.dashboard.stats.StatSlaves>
+      </bottomPortlets>
+    </hudson.plugins.view.dashboard.Dashboard>
+    <hudson.model.RadiatorView plugin="radiatorviewplugin@1.29">
+      <owner class="hudson" reference="../../.."/>
+      <name>Radiator</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>API_10.116.24</string>
+        <string>API_10.116.36</string>
+        <string>API_10.116.x</string>
+        <string>API_trunk</string>
+        <string>CNC_10.116.24</string>
+        <string>CNC_10.116.x</string>
+        <string>CNC_trunk</string>
+        <string>MMI_trunk</string>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <recurse>false</recurse>
+      <showStable>true</showStable>
+      <showStableDetail>true</showStableDetail>
+      <showBuildStability>true</showBuildStability>
+      <highVis>true</highVis>
+      <groupByPrefix>true</groupByPrefix>
+      <captionText></captionText>
+      <captionSize>36</captionSize>
+    </hudson.model.RadiatorView>
+    <hudson.model.RadiatorView plugin="radiatorviewplugin@1.29">
+      <owner class="hudson" reference="../../.."/>
+      <name>Experience</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>XLab/BuildLocal_trunk</string>
+        <string>XLab/TestLocal</string>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <recurse>false</recurse>
+      <showStable>false</showStable>
+      <showStableDetail>false</showStableDetail>
+      <showBuildStability>false</showBuildStability>
+      <highVis>true</highVis>
+      <groupByPrefix>true</groupByPrefix>
+      <captionText></captionText>
+      <captionSize>36</captionSize>
+    </hudson.model.RadiatorView>
+    <org.jenkinsci.plugins.environmentdashboard.EnvDashboardView plugin="environment-dashboard@1.1.7">
+      <owner class="hudson" reference="../../.."/>
+      <name>Env Dashboard</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <envOrder></envOrder>
+      <compOrder></compOrder>
+      <deployHistory>10</deployHistory>
+    </org.jenkinsci.plugins.environmentdashboard.EnvDashboardView>
+    <hudson.model.RadiatorView plugin="radiatorviewplugin@1.29">
+      <owner class="hudson" reference="../../.."/>
+      <name>Radiator_CNC</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>CNC_10.116.54</string>
+        <string>CNC_10.118.0</string>
+        <string>CNC_trunk</string>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <recurse>false</recurse>
+      <showStable>false</showStable>
+      <showStableDetail>false</showStableDetail>
+      <showBuildStability>false</showBuildStability>
+      <highVis>true</highVis>
+      <groupByPrefix>true</groupByPrefix>
+      <captionText></captionText>
+      <captionSize>36</captionSize>
+      <excludeRegex></excludeRegex>
+    </hudson.model.RadiatorView>
+  </views>
+  <primaryView>all</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label></label>
+  <nodeProperties/>
+  <globalNodeProperties/>
+  <noUsageStatistics>true</noUsageStatistics>
+</hudson>
