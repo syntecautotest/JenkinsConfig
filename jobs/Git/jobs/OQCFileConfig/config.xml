@@ -53,6 +53,11 @@
           <description></description>
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>Message</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
@@ -75,7 +80,7 @@ git config --path core.worktree %ConfigGitDir%&#xd;
 git status&#xd;
 git pull %ConfigGitRemote% master&#xd;
 git add --all&#xd;
-git commit -m &quot;%ModifyDate% by %ModifyID%&quot;&#xd;
+git commit -m &quot;%ModifyDate% by %ModifyID%, %Message%&quot;&#xd;
 git push %ConfigGitRemote% master</command>
     </hudson.tasks.BatchFile>
   </builders>
