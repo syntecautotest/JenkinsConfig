@@ -63,6 +63,11 @@
           <description></description>
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>Message</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
@@ -88,7 +93,7 @@ SET GIT_DIR=%FileGitDir%\.git&#xd;
 git config --path core.worktree %FileGitDir%&#xd;
 git pull %FileGitRemote% master&#xd;
 git add --all&#xd;
-git commit -m &quot;%ModifyDate% by %ModifyID%&quot;&#xd;
+git commit -m &quot;%ModifyDate% by %ModifyID%, %Message%&quot;&#xd;
 git push -u %FileGitRemote% master&#xd;
 for /f &quot;tokens=*&quot; %%a in (&apos;git rev-parse HEAD&apos;) do set HEAD_REVISION=%%a&#xd;
 echo OQCDB_REVISION=%HEAD_REVISION%&gt;%ConfigGitDir%\REV.props&#xd;
