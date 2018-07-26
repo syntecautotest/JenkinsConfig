@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>Wang Chih-Feng</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>{AQAAABAAAAAwiMw8oxq9M6OGrt7TIoMTj0mZuoU41+KBrmSDlPCCdTLxaa3oLPPlRXpZQOTG0GsWtDns+C0IKEJNVf+aQhGztA==}</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>API_10.116.x</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>OQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>OQCFileConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.24</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC2_TEST</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RecordConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.x</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RevertOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>全部</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>#jbcrypt:$2a$10$6qJ11KXtbKH0PN5qdY/orO64viSVuixV4MvxQ/2yR9n4LwwNansqi</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+      <emailAddress>chihfengwang@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1475132738405</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+  </properties>
+</user>

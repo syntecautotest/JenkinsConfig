@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>Schedule BM</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>{AQAAABAAAAAwiVE/pe7l1tqPzOC+EosvxHT/FWfKaxZWK1/ShLgB0kDaw2kbVwMyWCRRBmlDvWLS9/EqL5guwX414d+pAx85pg==}</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>全部</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>#jbcrypt:$2a$10$VigcgPpqBqK92lJy6ACPIevqhgRFh6UIyCcnWWsRwJ5xQd7E2JzJq</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+      <emailAddress>syntecclub@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>API_10.116.x</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>OQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>OQCFileConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.24</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC2_TEST</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RecordConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.x</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RevertOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1474197901678</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+  </properties>
+</user>

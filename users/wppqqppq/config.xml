@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>YoanaShih</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>{AQAAABAAAAAwtiVl/hNHYNcadohlpOJ94n+DNvxlYdP/7uNZoWapJMpsOMbQ+XLevwSLkT6qlcZlKp7ReIfTBs/XBpu8IEz0CQ==}</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>All</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+        <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.11+build.201701152243">
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>Build Monitor</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+          <jobNames>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+            <string>cnckernel_116</string>
+            <string>cnckernel_24</string>
+            <string>cnckernel_36</string>
+            <string>cnckernel_trunk</string>
+          </jobNames>
+          <jobFilters/>
+          <columns/>
+          <recurse>false</recurse>
+          <title>Build Monitor</title>
+          <config>
+            <displayCommitters>true</displayCommitters>
+            <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByLastBuildTime"/>
+          </config>
+        </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>#jbcrypt:$2a$10$OM60ZVGi35NHhyCggdpJF.fGVEo565FnjX5w/DXDZ8f3/yUMxtz32</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+      <emailAddress>wppqqppq@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1474097899597</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>API_10.116.x</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>OQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>OQCFileConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.24</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.118.0</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_10.118.0</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC2_TEST</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.x</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>RevertOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_10.116.54</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_10.116.54</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_10.116.36</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_10.116.24</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_10.118.0</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RecordConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.54</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+  </properties>
+</user>
