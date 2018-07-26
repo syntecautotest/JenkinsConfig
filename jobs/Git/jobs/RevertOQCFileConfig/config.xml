@@ -92,7 +92,9 @@ echo git revert %Revision%..HEAD --no-edit --no-commit&#xd;
 echo git commit -m &quot;Revert to %Revision%, %Message%&quot;&#xd;
 echo git push -u %FileGitRemote% master&#xd;
 &#xd;
-echo net use X: /delete</command>
+echo net use X: /delete&#xd;
+&#xd;
+echo copy %ConfigGitDir%/REV.props %BUILD_DIR%/REV.props</command>
     </hudson.tasks.BatchFile>
   </builders>
   <publishers>
@@ -102,7 +104,7 @@ echo net use X: /delete</command>
           <configs>
             <hudson.plugins.parameterizedtrigger.CurrentBuildParameters/>
             <hudson.plugins.parameterizedtrigger.FileBuildParameters>
-              <propertiesFile>${ConfigGitDir}/REV.props</propertiesFile>
+              <propertiesFile>${BUILD_DIR}/REV.props</propertiesFile>
               <failTriggerOnMissing>false</failTriggerOnMissing>
               <useMatrixChild>false</useMatrixChild>
               <onlyExactRuns>false</onlyExactRuns>
