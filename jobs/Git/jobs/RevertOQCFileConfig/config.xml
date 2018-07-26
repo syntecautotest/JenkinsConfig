@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
-      <useBuildBlocker>true</useBuildBlocker>
+      <useBuildBlocker>false</useBuildBlocker>
       <blockLevel>GLOBAL</blockLevel>
       <scanQueueFor>DISABLED</scanQueueFor>
       <blockingJobs>.*RecordConfig</blockingJobs>
@@ -30,20 +30,9 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
-        <hudson.model.StringParameterDefinition>
-          <name>ModifyID</name>
-          <description></description>
-          <defaultValue></defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>ModifyDate</name>
-          <description></description>
-          <defaultValue></defaultValue>
-        </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>FileGitDir</name>
           <description></description>
@@ -69,6 +58,11 @@
           <description></description>
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>Revision</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
@@ -85,19 +79,15 @@
   <builders>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
+net use X: %ConfigGitDir%&#xd;
 &#xd;
-echo ID:%ModifyID% Date:%ModifyDate%&#xd;
+SET GIT_DIR=%ConfigGitDir%\.git&#xd;
 &#xd;
-net use X: %FileGitDir%&#xd;
-&#xd;
-SET GIT_DIR=%FileGitDir%\.git&#xd;
-git config --path core.worktree %FileGitDir%&#xd;
-git pull %FileGitRemote% master&#xd;
-git add --all&#xd;
-git commit -m &quot;%ModifyDate% by %ModifyID%, %Message%&quot;&#xd;
+git config --path core.worktree %ConfigGitDir%&#xd;
+git pull %ConfigGitRemote% master&#xd;
+git revert %Revision%..HEAD --no-edit --no-commit&#xd;
+git commit -m &quot;Revert to %Revision%, %Message%&quot;&#xd;
 git push -u %FileGitRemote% master&#xd;
-for /f &quot;tokens=*&quot; %%a in (&apos;git rev-parse HEAD&apos;) do set HEAD_REVISION=%%a&#xd;
-echo OQCDB_REVISION=%HEAD_REVISION%&gt;%ConfigGitDir%\REV.props&#xd;
 &#xd;
 net use X: /delete</command>
     </hudson.tasks.BatchFile>
@@ -108,8 +98,14 @@ net use X: /delete</command>
         <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
           <configs>
             <hudson.plugins.parameterizedtrigger.CurrentBuildParameters/>
+            <hudson.plugins.parameterizedtrigger.FileBuildParameters>
+              <propertiesFile>${BUILD_DIR}/REV.props</propertiesFile>
+              <failTriggerOnMissing>true</failTriggerOnMissing>
+              <useMatrixChild>false</useMatrixChild>
+              <onlyExactRuns>false</onlyExactRuns>
+            </hudson.plugins.parameterizedtrigger.FileBuildParameters>
           </configs>
-          <projects>OQCFileConfig</projects>
+          <projects>RevertOQCDB</projects>
           <condition>SUCCESS</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
           <triggerFromChildProjects>false</triggerFromChildProjects>
