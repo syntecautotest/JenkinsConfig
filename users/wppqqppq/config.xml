@@ -86,6 +86,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>MakeRevertPack</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>CNC2_TEST</string>
           <boolean>true</boolean>
         </entry>

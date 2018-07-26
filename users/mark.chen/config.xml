@@ -19,6 +19,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>MakeRevertPack</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>RecordConfig</string>
           <boolean>true</boolean>
         </entry>
