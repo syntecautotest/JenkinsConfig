@@ -77,8 +77,16 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
+    <EnvInjectBuilder plugin="envinject@1.93.1">
+      <info>
+        <propertiesFilePath>${ConfigGitDir}/REV.props</propertiesFilePath>
+      </info>
+    </EnvInjectBuilder>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
+&#xd;
+echo %OQCDB_REVISION%&#xd;
+&#xd;
 echo net use X: %ConfigGitDir%&#xd;
 &#xd;
 SET GIT_DIR=%ConfigGitDir%\.git&#xd;
