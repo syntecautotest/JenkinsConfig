@@ -79,17 +79,17 @@
   <builders>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
-echo net use X: %ConfigGitDir%&#xd;
+net use X: %ConfigGitDir%&#xd;
 &#xd;
 SET GIT_DIR=%ConfigGitDir%\.git&#xd;
 &#xd;
-echo git config --path core.worktree %ConfigGitDir%&#xd;
-echo git pull %ConfigGitRemote% master&#xd;
-echo git revert %Revision%..HEAD --no-edit --no-commit&#xd;
-echo git commit -m &quot;Revert to %Revision%, %Message%&quot;&#xd;
-echo git push -u %FileGitRemote% master&#xd;
+git config --path core.worktree %ConfigGitDir%&#xd;
+git pull %ConfigGitRemote% master&#xd;
+git revert %Revision%..HEAD --no-edit --no-commit&#xd;
+git commit -m &quot;Revert to %Revision%, %Message%&quot;&#xd;
+git push -u %FileGitRemote% master&#xd;
 &#xd;
-echo net use X: /delete</command>
+net use X: /delete</command>
     </hudson.tasks.BatchFile>
   </builders>
   <publishers>
