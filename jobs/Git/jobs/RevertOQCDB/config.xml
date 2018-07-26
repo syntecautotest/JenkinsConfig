@@ -65,7 +65,7 @@
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
 &#xd;
-net use X: %FileGitDir%&#xd;
+echo net use X: %FileGitDir%&#xd;
 &#xd;
 echo SET GIT_DIR=%FileGitDir%\.git&#xd;
 &#xd;
@@ -75,7 +75,7 @@ echo git revert %OQCDB_REVISION%..HEAD --no-edit --no-commit&#xd;
 echo git commit -m &quot;Revert to %OQCDB_REVISION%, %Message%&quot;&#xd;
 echo git push -u %FileGitRemote% master&#xd;
 &#xd;
-net use X: /delete</command>
+echo net use X: /delete</command>
     </hudson.tasks.BatchFile>
   </builders>
   <publishers/>
