@@ -99,7 +99,7 @@ echo net use X: /delete</command>
           <configs>
             <hudson.plugins.parameterizedtrigger.CurrentBuildParameters/>
             <hudson.plugins.parameterizedtrigger.FileBuildParameters>
-              <propertiesFile>${BUILD_DIR}/REV.props</propertiesFile>
+              <propertiesFile>${ConfigGitDir}/REV.props</propertiesFile>
               <failTriggerOnMissing>true</failTriggerOnMissing>
               <useMatrixChild>false</useMatrixChild>
               <onlyExactRuns>false</onlyExactRuns>
