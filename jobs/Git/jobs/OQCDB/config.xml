@@ -7,7 +7,7 @@
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
       <useBuildBlocker>true</useBuildBlocker>
       <blockLevel>GLOBAL</blockLevel>
-      <scanQueueFor>DISABLED</scanQueueFor>
+      <scanQueueFor>ALL</scanQueueFor>
       <blockingJobs>.*RecordConfig</blockingJobs>
     </hudson.plugins.buildblocker.BuildBlockerProperty>
     <org.jenkins.ci.plugins.html5__notifier.JobPropertyImpl plugin="html5-notifier-plugin@1.5">
@@ -95,6 +95,7 @@ git pull %FileGitRemote% master&#xd;
 git add --all&#xd;
 git commit -m &quot;%ModifyDate% by %ModifyID%, %Message%&quot;&#xd;
 git push -u %FileGitRemote% master&#xd;
+&#xd;
 for /f &quot;tokens=*&quot; %%a in (&apos;git rev-parse HEAD&apos;) do set HEAD_REVISION=%%a&#xd;
 echo OQCDB_REVISION=%HEAD_REVISION%&gt;%ConfigGitDir%\REV.props&#xd;
 &#xd;
