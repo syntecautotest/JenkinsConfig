@@ -15,10 +15,6 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>OQCDB</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>OQCFileConfig</string>
           <boolean>true</boolean>
         </entry>
@@ -36,6 +32,10 @@
         </entry>
         <entry>
           <string>MakeRevertPack</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SaveOQCDB</string>
           <boolean>true</boolean>
         </entry>
         <entry>
