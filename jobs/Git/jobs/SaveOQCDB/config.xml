@@ -5,10 +5,10 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
-      <useBuildBlocker>false</useBuildBlocker>
+      <useBuildBlocker>true</useBuildBlocker>
       <blockLevel>GLOBAL</blockLevel>
-      <scanQueueFor>DISABLED</scanQueueFor>
-      <blockingJobs></blockingJobs>
+      <scanQueueFor>ALL</scanQueueFor>
+      <blockingJobs>.*RecordConfig</blockingJobs>
     </hudson.plugins.buildblocker.BuildBlockerProperty>
     <org.jenkins.ci.plugins.html5__notifier.JobPropertyImpl plugin="html5-notifier-plugin@1.5">
       <skip>false</skip>
@@ -44,6 +44,16 @@
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
+          <name>FileGitDir</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>FileGitRemote</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>ConfigGitDir</name>
           <description></description>
           <defaultValue></defaultValue>
@@ -74,16 +84,38 @@
   <builders>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
+&#xd;
 echo ID:%ModifyID% Date:%ModifyDate%&#xd;
-SET GIT_DIR=%ConfigGitDir%\.git&#xd;
-git config --path core.worktree %ConfigGitDir%&#xd;
-git status&#xd;
-git pull %ConfigGitRemote% master&#xd;
+&#xd;
+net use X: %FileGitDir%&#xd;
+&#xd;
+SET GIT_DIR=%FileGitDir%\.git&#xd;
+git config --path core.worktree %FileGitDir%&#xd;
+git pull %FileGitRemote% master&#xd;
 git add --all&#xd;
 git commit -m &quot;%ModifyDate% by %ModifyID%, %Message%&quot;&#xd;
-git push %ConfigGitRemote% master</command>
+git push -u %FileGitRemote% master&#xd;
+&#xd;
+for /f &quot;tokens=*&quot; %%a in (&apos;git rev-parse HEAD&apos;) do set HEAD_REVISION=%%a&#xd;
+echo OQCDB_REVISION=%HEAD_REVISION%&gt;%ConfigGitDir%\REV.props&#xd;
+&#xd;
+net use X: /delete</command>
     </hudson.tasks.BatchFile>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.33">
+      <configs>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.CurrentBuildParameters/>
+          </configs>
+          <projects>SaveOQCFileConfig</projects>
+          <condition>SUCCESS</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+          <triggerFromChildProjects>false</triggerFromChildProjects>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+      </configs>
+    </hudson.plugins.parameterizedtrigger.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

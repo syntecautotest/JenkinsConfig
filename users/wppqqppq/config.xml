@@ -66,10 +66,6 @@
           <boolean>false</boolean>
         </entry>
         <entry>
-          <string>OQCFileConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>CNC_10.116.24</string>
           <boolean>false</boolean>
         </entry>
@@ -119,6 +115,10 @@
         </entry>
         <entry>
           <string>SaveOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SaveOQCFileConfig</string>
           <boolean>true</boolean>
         </entry>
         <entry>

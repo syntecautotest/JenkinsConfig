@@ -11,10 +11,6 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>OQCFileConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>CNC_10.118.0</string>
           <boolean>true</boolean>
         </entry>
@@ -28,6 +24,10 @@
         </entry>
         <entry>
           <string>SaveOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SaveOQCFileConfig</string>
           <boolean>true</boolean>
         </entry>
         <entry>

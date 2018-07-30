@@ -15,15 +15,15 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>OQCFileConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>MakeRevertPack</string>
           <boolean>true</boolean>
         </entry>
         <entry>
           <string>SaveOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SaveOQCFileConfig</string>
           <boolean>true</boolean>
         </entry>
         <entry>
