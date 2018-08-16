@@ -77,7 +77,7 @@
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
   <assignedNode>CNC2</assignedNode>
   <canRoam>false</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
