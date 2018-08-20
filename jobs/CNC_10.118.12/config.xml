@@ -129,7 +129,7 @@ POPD</command>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.18">
       <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
-        <timeoutSecondsString>3600</timeoutSecondsString>
+        <timeoutSecondsString>7200</timeoutSecondsString>
       </strategy>
       <timeoutEnvVar>TIMEOUT_VAR</timeoutEnvVar>
       <operationList>
