@@ -87,6 +87,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
+  <customWorkspace>F:\Jenkins\</customWorkspace>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.tasks.BatchFile>
