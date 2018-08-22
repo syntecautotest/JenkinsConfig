@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <displayName>ScheduleParamJob</displayName>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
+      <useBuildBlocker>false</useBuildBlocker>
+      <blockLevel>GLOBAL</blockLevel>
+      <scanQueueFor>DISABLED</scanQueueFor>
+      <blockingJobs></blockingJobs>
+    </hudson.plugins.buildblocker.BuildBlockerProperty>
+    <org.jenkins.ci.plugins.html5__notifier.JobPropertyImpl plugin="html5-notifier-plugin@1.5">
+      <skip>false</skip>
+    </org.jenkins.ci.plugins.html5__notifier.JobPropertyImpl>
+    <com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty plugin="ownership@0.9.1"/>
+    <org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty plugin="leastload@1.0.3">
+      <leastLoadDisabled>false</leastLoadDisabled>
+    </org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty>
+    <com.suryagaddipati.jenkins.SlaveUtilizationProperty plugin="slave-utilization-plugin@1.8">
+      <needsExclusiveAccessToNode>false</needsExclusiveAccessToNode>
+      <singleInstancePerSlave>false</singleInstancePerSlave>
+      <slaveUtilizationPercentage>0</slaveUtilizationPercentage>
+    </com.suryagaddipati.jenkins.SlaveUtilizationProperty>
+    <hudson.plugins.throttleconcurrents.ThrottleJobProperty plugin="throttle-concurrents@1.9.0">
+      <maxConcurrentPerNode>0</maxConcurrentPerNode>
+      <maxConcurrentTotal>0</maxConcurrentTotal>
+      <categories class="java.util.concurrent.CopyOnWriteArrayList"/>
+      <throttleEnabled>false</throttleEnabled>
+      <throttleOption>project</throttleOption>
+      <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
+      <paramsToUseForLimit></paramsToUseForLimit>
+    </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
+    <EnvInjectJobProperty plugin="envinject@1.93.1">
+      <info>
+        <groovyScriptContent>TimeZone.setDefault(TimeZone.getTimeZone(&apos;UTC&apos;))
+def now = new Date()
+def map =  [BUILD_DATE: now.format(&quot;yyyy-MM-dd&quot;) ];
+return map</groovyScriptContent>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+      <on>true</on>
+      <keepJenkinsSystemVariables>true</keepJenkinsSystemVariables>
+      <keepBuildVariables>true</keepBuildVariables>
+      <overrideBuildParameters>false</overrideBuildParameters>
+    </EnvInjectJobProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>BRANCH_VER</name>
+          <description>cnckernel branch name</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>v10_116_36</string>
+              <string>v10_116_50</string>
+              <string>v10_116_52</string>
+              <string>v10_116_54</string>
+              <string>v10_118_0</string>
+              <string>v10_118_12</string>
+              <string>trunk</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>SECTION</name>
+          <description>section of the program</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>CNC</string>
+              <string>API</string>
+              <string>MMI</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>Schedule_BM</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>true</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>..\Schedule</customWorkspace>
+  <builders>
+    <org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder plugin="conditional-buildstep@1.3.5">
+      <condition class="org.jenkins_ci.plugins.run_condition.logic.Not" plugin="run-condition@1.0">
+        <condition class="org.jenkins_ci.plugins.run_condition.core.FileExistsCondition">
+          <file>${BUILD_DIR}/error/check.log</file>
+          <baseDir class="org.jenkins_ci.plugins.run_condition.common.BaseDirectory$Workspace"/>
+        </condition>
+      </condition>
+      <buildStep class="org.jenkins_ci.plugins.fail_the_build.FixResultBuilder" plugin="fail-the-build-plugin@1.0">
+        <defaultResultName>ABORTED</defaultResultName>
+        <success></success>
+        <unstable></unstable>
+        <failure></failure>
+        <aborted></aborted>
+      </buildStep>
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+    </org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder plugin="conditional-buildstep@1.3.5">
+      <condition class="org.jenkins_ci.plugins.run_condition.core.FileExistsCondition" plugin="run-condition@1.0">
+        <file>${BUILD_DIR}/error/check.log</file>
+        <baseDir class="org.jenkins_ci.plugins.run_condition.common.BaseDirectory$Workspace"/>
+      </condition>
+      <buildStep class="hudson.tasks.BatchFile">
+        <command>@echo off&#xd;
+rem normalize working directory&#xd;
+SET ROOT=%BUILD_DIR:/=\%&#xd;
+RD /S /Q Artifacts&#xd;
+PUSHD %ROOT%&#xd;
+echo %CD%&#xd;
+DEL /Q temp.props&#xd;
+for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
+	echo %%~zi&#xd;
+	if %%~zi gtr 0 (&#xd;
+		echo Bulid Failed.&#xd;
+echo CHECK_RESULT=FAILURE&gt;temp.props&#xd;
+echo CHECK_RESULT=FAILURE&#xd;
+POPD&#xd;
+exit&#xd;
+	)&#xd;
+)&#xd;
+echo CHECK_RESULT=SUCCESS&gt;temp.props&#xd;
+echo CHECK_RESULT=SUCCESS&#xd;
+POPD</command>
+      </buildStep>
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+    </org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder plugin="conditional-buildstep@1.3.5">
+      <condition class="org.jenkins_ci.plugins.run_condition.core.AlwaysRun" plugin="run-condition@1.0"/>
+      <buildStep class="EnvInjectBuilder" plugin="envinject@1.93.1">
+        <info>
+          <propertiesFilePath>${BUILD_DIR}/temp.props</propertiesFilePath>
+        </info>
+      </buildStep>
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+    </org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.5">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>${CHECK_RESULT}</arg1>
+        <arg2>FAILURE</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
+          <project>ScheduleParam</project>
+          <filter>${BUILD_DIR}/*rror/**</filter>
+          <target>Artifacts/${BUILD_DIR}</target>
+          <excludes></excludes>
+          <selector class="hudson.plugins.copyartifact.WorkspaceSelector"/>
+          <flatten>true</flatten>
+          <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+        </hudson.plugins.copyartifact.CopyArtifact>
+        <org.jenkins__ci.plugins.fail__the__build.FixResultBuilder plugin="fail-the-build-plugin@1.0">
+          <defaultResultName>FAILURE</defaultResultName>
+          <success></success>
+          <unstable></unstable>
+          <failure></failure>
+          <aborted></aborted>
+        </org.jenkins__ci.plugins.fail__the__build.FixResultBuilder>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>Artifacts/${BUILD_DIR}/**</artifacts>
+      <allowEmptyArchive>true</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+    </hudson.tasks.ArtifactArchiver>
+  </publishers>
+  <buildWrappers>
+    <org.jenkinsci.plugins.environmentdashboard.DashboardBuilder plugin="environment-dashboard@1.1.7">
+      <nameOfEnv>SCHEDULE</nameOfEnv>
+      <componentName>${BRANCH_VER}</componentName>
+      <buildNumber>#${BUILD_NUMBER}</buildNumber>
+      <buildJob></buildJob>
+      <packageName>${SECTION}</packageName>
+      <data/>
+      <addColumns>false</addColumns>
+    </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
+    <EnvInjectBuildWrapper plugin="envinject@1.93.1">
+      <info>
+        <groovyScriptContent>if(&quot;CNC&quot;.equals(SECTION)){
+def DIR_HEAD = &quot;trunk&quot;.equals(BRANCH_VER) ? &quot;&quot; : &quot;rel_&quot;;
+if(&quot;MMI&quot;.equals(SECTION)){
+def BRANCH_DIR = &quot;v10_116&quot;.equals(BRANCH_VER) ? BRANCH_VER+&quot;_x&quot;:BRANCH_VER;
+def map =  [BUILD_DIR: DIR_HEAD + BRANCH_DIR];
+return map
+} else {
+def map = [BUILD_DIR: DIR_HEAD + BRANCH_VER+&quot;/Build&quot;];
+return map
+}
+}
+else {
+def DIR_HEAD = SECTION + &quot;_&quot;;
+if(&quot;MMI&quot;.equals(SECTION)){
+def BRANCH_DIR = &quot;v10_116&quot;.equals(BRANCH_VER) ? BRANCH_VER+&quot;_x&quot;:BRANCH_VER;
+def map =  [BUILD_DIR: DIR_HEAD + BRANCH_DIR];
+return map
+} else {
+def map = [BUILD_DIR: DIR_HEAD + BRANCH_VER+&quot;/Build&quot;];
+return map
+}
+}</groovyScriptContent>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+    </EnvInjectBuildWrapper>
+    <org.jenkinsci.plugins.buildnamesetter.BuildNameSetter plugin="build-name-setter@1.6.5">
+      <template>#${BUILD_NUMBER} ${BRANCH_VER} ${SECTION} [${ENV, var=&quot;BUILD_DATE&quot;}]</template>
+      <runAtStart>true</runAtStart>
+      <runAtEnd>true</runAtEnd>
+    </org.jenkinsci.plugins.buildnamesetter.BuildNameSetter>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.8.8"/>
+  </buildWrappers>
+</project>
