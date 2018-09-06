@@ -253,13 +253,17 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>API_10.116.24</string>
-        <string>API_10.116.36</string>
-        <string>API_10.116.x</string>
+        <string>API_10.116.54</string>
+        <string>API_10.118.0</string>
+        <string>API_10.118.12</string>
         <string>API_trunk</string>
-        <string>CNC_10.116.24</string>
-        <string>CNC_10.116.x</string>
+        <string>CNC_10.116.54</string>
+        <string>CNC_10.118.0</string>
+        <string>CNC_10.118.12</string>
         <string>CNC_trunk</string>
+        <string>MMI_10.116.54</string>
+        <string>MMI_10.118.0</string>
+        <string>MMI_10.118.12</string>
         <string>MMI_trunk</string>
       </jobNames>
       <jobFilters/>
@@ -272,6 +276,7 @@
       <groupByPrefix>true</groupByPrefix>
       <captionText></captionText>
       <captionSize>36</captionSize>
+      <excludeRegex></excludeRegex>
     </hudson.model.RadiatorView>
     <hudson.model.RadiatorView plugin="radiatorviewplugin@1.29">
       <owner class="hudson" reference="../../.."/>
