@@ -329,6 +329,35 @@
       <captionSize>36</captionSize>
       <excludeRegex></excludeRegex>
     </hudson.model.RadiatorView>
+    <hudson.model.RadiatorView plugin="radiatorviewplugin@1.29">
+      <owner class="hudson" reference="../../.."/>
+      <name>R</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@2.0.4"/>
+        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
+      </columns>
+      <recurse>false</recurse>
+      <showStable>false</showStable>
+      <showStableDetail>false</showStableDetail>
+      <showBuildStability>false</showBuildStability>
+      <highVis>true</highVis>
+      <groupByPrefix>true</groupByPrefix>
+    </hudson.model.RadiatorView>
   </views>
   <primaryView>all</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
