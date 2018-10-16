@@ -43,7 +43,7 @@
           <permission>hudson.model.Item.Build</permission>
         </permissions>
         <assignedSIDs>
-          <sid>remotetrigger</sid>
+          <sid>RemoteTrigger</sid>
         </assignedSIDs>
       </role>
       <role name="VIEW" pattern=".*">
