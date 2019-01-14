@@ -8,6 +8,7 @@
   <mode>EXCLUSIVE</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy">
+    <roleMap type="projectRoles"/>
     <roleMap type="globalRoles">
       <role name="BM" pattern=".*">
         <permissions>
@@ -41,7 +42,9 @@
           <permission>hudson.model.Item.Workspace</permission>
           <permission>hudson.model.Item.Build</permission>
         </permissions>
-        <assignedSIDs/>
+        <assignedSIDs>
+          <sid>RemoteTrigger</sid>
+        </assignedSIDs>
       </role>
       <role name="VIEW" pattern=".*">
         <permissions>
@@ -106,6 +109,7 @@
         </assignedSIDs>
       </role>
     </roleMap>
+    <roleMap type="slaveRoles"/>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>false</disableSignup>
