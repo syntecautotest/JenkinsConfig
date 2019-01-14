@@ -104,7 +104,6 @@
           <permission>hudson.model.Run.Update</permission>
         </permissions>
         <assignedSIDs>
-          <sid>remotetrigger</sid>
           <sid>wppqqppq</sid>
           <sid>autotest</sid>
         </assignedSIDs>
