@@ -23,23 +23,6 @@
       <default/>
       <int>183</int>
       <hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord>
-        <buildUsage>13708595023</buildUsage>
-        <wsUsage>90465095590</wsUsage>
-        <date class="hudson.plugins.disk_usage.DiskUsageOvearallGraphGenerator$DiskUsageRecord$1" serialization="custom">
-          <date>
-            <long>1541937642957</long>
-          </date>
-          <hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord_-1>
-            <default>
-              <outer-class reference="../../../.."/>
-            </default>
-          </hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord_-1>
-        </date>
-        <jobsWithoutBuildsUsage>887344265</jobsWithoutBuildsUsage>
-        <allSpace>209715195904</allSpace>
-        <diskUsageNonSlaveWorkspaces>0</diskUsageNonSlaveWorkspaces>
-      </hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord>
-      <hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord>
         <buildUsage>14569721800</buildUsage>
         <wsUsage>95497876963</wsUsage>
         <date class="hudson.plugins.disk_usage.DiskUsageOvearallGraphGenerator$DiskUsageRecord$1" serialization="custom">
@@ -3122,6 +3105,23 @@
         <date class="hudson.plugins.disk_usage.DiskUsageOvearallGraphGenerator$DiskUsageRecord$1" serialization="custom">
           <date>
             <long>1558388715679</long>
+          </date>
+          <hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord_-1>
+            <default>
+              <outer-class reference="../../../.."/>
+            </default>
+          </hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord_-1>
+        </date>
+        <jobsWithoutBuildsUsage>887344265</jobsWithoutBuildsUsage>
+        <allSpace>209715195904</allSpace>
+        <diskUsageNonSlaveWorkspaces>0</diskUsageNonSlaveWorkspaces>
+      </hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord>
+      <hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord>
+        <buildUsage>26153043138</buildUsage>
+        <wsUsage>100249681158</wsUsage>
+        <date class="hudson.plugins.disk_usage.DiskUsageOvearallGraphGenerator$DiskUsageRecord$1" serialization="custom">
+          <date>
+            <long>1558475117693</long>
           </date>
           <hudson.plugins.disk__usage.DiskUsageOvearallGraphGenerator_-DiskUsageRecord_-1>
             <default>
