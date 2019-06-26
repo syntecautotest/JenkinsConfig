@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>Alpha0729</fullName>
+  <fullName>1362</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwfMcU7NEfEE5hq8iSCoK9wtAehteh8N/G9tmwAYX91xm+60bU4iC2BCgQf6TLgchRxmB4BUGpLw8xUdHztcPY7g==}</apiToken>
+      <apiToken>{AQAAABAAAAAwhM2bghIpRSSMFDflZxnGFgl2zlUgpdqT4NymXNiWwgtx3yp1IHwLHGlkAZWH0nXQ3T55sDNVxmqUkEIM2OSZUw==}</apiToken>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
@@ -11,31 +11,7 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>MakeRevertPack</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>SaveOQCDB</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>SaveOQCFileConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>CNC2_TEST</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>CNC2_11822</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>RecordConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>RevertOQCDB</string>
           <boolean>true</boolean>
         </entry>
       </data>

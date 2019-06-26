@@ -39,6 +39,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>CNC2_11822</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>RecordConfig</string>
           <boolean>true</boolean>
         </entry>

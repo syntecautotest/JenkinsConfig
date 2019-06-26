@@ -19,15 +19,31 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>MakeRevertPack</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC2_TEST</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC2_11822</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.x</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RevertOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>API_trunk</string>
           <boolean>true</boolean>
         </entry>
         <entry>
           <string>CNC_trunk</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MakeRevertPack</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -39,19 +55,7 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>CNC2_TEST</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>RecordConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>CNC_10.116.x</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>RevertOQCDB</string>
           <boolean>true</boolean>
         </entry>
       </data>

@@ -86,6 +86,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>CNC2_11822</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>CNC_10.116.x</string>
           <boolean>false</boolean>
         </entry>
