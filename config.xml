@@ -368,26 +368,22 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../hudson.model.RadiatorView[4]/jobNames/comparator"/>
+        <string>MMI_10.116.54</string>
+        <string>MMI_10.118.12</string>
+        <string>MMI_10.118.22</string>
+        <string>MMI_trunk</string>
       </jobNames>
       <jobFilters/>
-      <columns>
-        <hudson.views.StatusColumn/>
-        <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
-        <hudson.views.LastDurationColumn/>
-        <hudson.views.BuildButtonColumn/>
-        <org.jenkins.plugins.builton.BuiltOnColumn plugin="built-on-column@1.1"/>
-        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@2.0.4"/>
-        <hudson.plugins.projectstats.column.NumBuildsColumn plugin="project-stats-plugin@0.4"/>
-      </columns>
+      <columns/>
       <recurse>false</recurse>
       <showStable>false</showStable>
       <showStableDetail>false</showStableDetail>
       <showBuildStability>false</showBuildStability>
       <highVis>true</highVis>
       <groupByPrefix>true</groupByPrefix>
+      <captionText></captionText>
+      <captionSize>36</captionSize>
+      <excludeRegex></excludeRegex>
     </hudson.model.RadiatorView>
   </views>
   <primaryView>all</primaryView>
