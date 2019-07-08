@@ -161,8 +161,9 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>CNC_10.116.24</string>
-        <string>CNC_10.116.x</string>
+        <string>CNC_10.116.54</string>
+        <string>CNC_10.118.12</string>
+        <string>CNC_10.118.22</string>
         <string>CNC_trunk</string>
       </jobNames>
       <jobFilters/>
