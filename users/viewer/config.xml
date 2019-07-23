@@ -20,7 +20,7 @@
         </entry>
         <entry>
           <string>CNC_trunk</string>
-          <boolean>false</boolean>
+          <boolean>true</boolean>
         </entry>
         <entry>
           <string>MakeRevertPack</string>
