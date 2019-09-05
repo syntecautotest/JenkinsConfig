@@ -48,7 +48,7 @@
   <builders/>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>ScheduleCheck_cnckernel_54,ScheduleCheck_cnckernel_118_0,ScheduleCheck_cnckernel_118_12,ScheduleCheck_cnckernel_trunk</childProjects>
+      <childProjects>ScheduleCheck_cnckernel_118_12,ScheduleCheck_cnckernel_118_22,ScheduleCheck_cnckernel_trunk</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
