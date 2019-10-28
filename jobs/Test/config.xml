@@ -33,7 +33,7 @@
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
-        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.12&quot; ];
+        <groovyScriptContent>def map =  [XX_BRANCH: &quot;118.12x&quot; ];
 return map</groovyScriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
@@ -161,8 +161,8 @@ POPD&#xd;
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
     <org.jenkinsci.plugins.environmentdashboard.DashboardBuilder plugin="environment-dashboard@1.1.7">
-      <nameOfEnv>SVN Check Build on XP VM</nameOfEnv>
-      <componentName>apikernel</componentName>
+      <nameOfEnv>GIT Check Build on XP VM</nameOfEnv>
+      <componentName>API</componentName>
       <buildNumber>${BUILD_NUMBER}</buildNumber>
       <buildJob></buildJob>
       <packageName>${XX_BRANCH}</packageName>
