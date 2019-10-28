@@ -66,16 +66,12 @@ return map</groovyScriptContent>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/API_10.118.12x</name>
+        <name>API_10.118.12x</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions>
-      <hudson.plugins.git.extensions.impl.LocalBranch>
-        <localBranch>API_10.118.12x</localBranch>
-      </hudson.plugins.git.extensions.impl.LocalBranch>
-    </extensions>
+    <extensions/>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
