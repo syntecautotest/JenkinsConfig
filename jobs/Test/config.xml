@@ -71,7 +71,9 @@ return map</groovyScriptContent>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.LocalBranch/>
+    </extensions>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
@@ -90,7 +92,7 @@ return map</groovyScriptContent>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
-      <project>CNC_10.118.12</project>
+      <project></project>
       <filter>Build/Release/**/CNCSDK*.zip</filter>
       <target>Build/OCSDK</target>
       <excludes></excludes>
@@ -171,7 +173,9 @@ POPD&#xd;
     </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
     <EnvInjectBuildWrapper plugin="envinject@1.93.1">
       <info>
-        <scriptContent>git log -1</scriptContent>
+        <scriptContent>PUSHD %WORKSPACE%
+git log -1
+POPD</scriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
     </EnvInjectBuildWrapper>
