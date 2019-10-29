@@ -71,9 +71,7 @@ return map</groovyScriptContent>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions>
-      <hudson.plugins.git.extensions.impl.LocalBranch/>
-    </extensions>
+    <extensions/>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
@@ -92,7 +90,7 @@ return map</groovyScriptContent>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
-      <project></project>
+      <project>CNC_10.118.12</project>
       <filter>Build/Release/**/CNCSDK*.zip</filter>
       <target>Build/OCSDK</target>
       <excludes></excludes>
