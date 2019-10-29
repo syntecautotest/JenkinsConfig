@@ -33,8 +33,6 @@
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
-        <groovyScriptContent>def map =  [XX_BRANCH: &quot;118.12x&quot; ];
-return map</groovyScriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
       <on>true</on>
@@ -66,17 +64,12 @@ return map</groovyScriptContent>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/API_118.22x</name>
+        <name>*/master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions>
-      <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
-      <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
-        <relativeTargetDir></relativeTargetDir>
-      </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
-    </extensions>
+    <extensions/>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
@@ -85,81 +78,9 @@ return map</groovyScriptContent>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.SCMTrigger>
-      <spec>* 8-18 * * *</spec>
-      <ignorePostCommitHooks>false</ignorePostCommitHooks>
-    </hudson.triggers.SCMTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>true</concurrentBuild>
-  <builders>
-    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
-    <hudson.tasks.BatchFile>
-      <command>@echo off&#xd;
-rem normalize working directory&#xd;
-PUSHD %WORKSPACE%\Build&#xd;
-&#xd;
-echo %CD%&#xd;
-&#xd;
-call build-release.bat&#xd;
-&#xd;
-for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
-	echo %%~zi&#xd;
-	if %%~zi gtr 0 (&#xd;
-		echo Bulid Failed Due to %GIT_URL%/GIT_LOCAL_BRANCH at %GIT_COMMIT%&#xd;
-exit 1&#xd;
-POPD&#xd;
-	)&#xd;
-)&#xd;
-POPD&#xd;
-&#xd;
-</command>
-    </hudson.tasks.BatchFile>
-  </builders>
-  <publishers>
-    <hudson.tasks.ArtifactArchiver>
-      <artifacts>Build/Release/**,Build/error/**</artifacts>
-      <allowEmptyArchive>false</allowEmptyArchive>
-      <onlyIfSuccessful>false</onlyIfSuccessful>
-      <fingerprint>false</fingerprint>
-      <defaultExcludes>true</defaultExcludes>
-      <caseSensitive>true</caseSensitive>
-    </hudson.tasks.ArtifactArchiver>
-    <hudson.tasks.Fingerprinter>
-      <targets>Build/Release/**</targets>
-    </hudson.tasks.Fingerprinter>
-  </publishers>
-  <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.18">
-      <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
-        <timeoutSecondsString>3600</timeoutSecondsString>
-      </strategy>
-      <timeoutEnvVar>TIMEOUT_VAR</timeoutEnvVar>
-      <operationList>
-        <hudson.plugins.build__timeout.operations.AbortOperation/>
-      </operationList>
-    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <org.jenkinsci.plugins.environmentdashboard.DashboardBuilder plugin="environment-dashboard@1.1.7">
-      <nameOfEnv>GIT Check Build on XP VM</nameOfEnv>
-      <componentName>API</componentName>
-      <buildNumber>${BUILD_NUMBER}</buildNumber>
-      <buildJob></buildJob>
-      <packageName>${XX_BRANCH}</packageName>
-      <data/>
-      <addColumns>false</addColumns>
-    </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
-    <EnvInjectBuildWrapper plugin="envinject@1.93.1">
-      <info>
-        <scriptContent>PUSHD %WORKSPACE%
-git log -1
-POPD</scriptContent>
-        <loadFilesFromMaster>false</loadFilesFromMaster>
-      </info>
-    </EnvInjectBuildWrapper>
-    <org.jenkinsci.plugins.buildnamesetter.BuildNameSetter plugin="build-name-setter@1.6.5">
-      <template>#${BUILD_NUMBER} ${ENV,var=&quot;JIRA_ISSUES&quot;} ${CHANGES, format=&quot;at rev%r&quot;} ${BUILD_LOG_MULTILINE_REGEX, regex=&quot;by (.*)&quot;, maxMatches=1, showTruncatedLines=false}</template>
-      <runAtStart>true</runAtStart>
-      <runAtEnd>true</runAtEnd>
-    </org.jenkinsci.plugins.buildnamesetter.BuildNameSetter>
-  </buildWrappers>
+  <builders/>
+  <publishers/>
+  <buildWrappers/>
 </project>
