@@ -42,18 +42,6 @@ return map</groovyScriptContent>
       <keepBuildVariables>true</keepBuildVariables>
       <overrideBuildParameters>false</overrideBuildParameters>
     </EnvInjectJobProperty>
-    <hudson.model.ParametersDefinitionProperty>
-      <parameterDefinitions>
-        <org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition plugin="nodelabelparameter@1.7.2">
-          <name></name>
-          <description></description>
-          <defaultValue>BM</defaultValue>
-          <allNodesMatchingLabel>false</allNodesMatchingLabel>
-          <triggerIfResult>allCases</triggerIfResult>
-          <nodeEligibility class="org.jvnet.jenkins.plugins.nodelabelparameter.node.AllNodeEligibility"/>
-        </org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition>
-      </parameterDefinitions>
-    </hudson.model.ParametersDefinitionProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
@@ -75,7 +63,7 @@ return map</groovyScriptContent>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
-  <assignedNode>BM</assignedNode>
+  <assignedNode>TESTMAN3_BM_2</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -86,7 +74,7 @@ return map</groovyScriptContent>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
-  <concurrentBuild>true</concurrentBuild>
+  <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
