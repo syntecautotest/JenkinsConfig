@@ -74,7 +74,7 @@ return map</groovyScriptContent>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
-  <concurrentBuild>false</concurrentBuild>
+  <concurrentBuild>true</concurrentBuild>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
