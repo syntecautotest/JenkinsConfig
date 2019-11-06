@@ -61,9 +61,7 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.model.PaneStatusProperties>
-      <collapsed>
-        <string>buildQueue</string>
-      </collapsed>
+      <collapsed/>
     </hudson.model.PaneStatusProperties>
     <hudson.model.MyViewsProperty>
       <views>
