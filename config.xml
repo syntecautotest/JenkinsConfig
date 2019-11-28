@@ -191,9 +191,18 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView/jobNames/comparator"/>
-        <string>CNC_10.116.24</string>
-        <string>CNC_10.116.x</string>
+        <string>API_10.116.54</string>
+        <string>API_10.118.12</string>
+        <string>API_10.118.22</string>
+        <string>API_trunk</string>
+        <string>CNC_10.116.54</string>
+        <string>CNC_10.118.12</string>
+        <string>CNC_10.118.22</string>
         <string>CNC_trunk</string>
+        <string>MMI_10.116.54</string>
+        <string>MMI_10.118.12</string>
+        <string>MMI_10.118.22</string>
+        <string>MMI_trunk</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -214,23 +223,23 @@
       <rightPortletWidth>50%</rightPortletWidth>
       <leftPortlets>
         <hudson.plugins.view.dashboard.core.JobsPortlet>
-          <id>dashboard_portlet_14059</id>
+          <id>dashboard_portlet_22146</id>
           <name>Jobs Grid</name>
           <columnCount>3</columnCount>
           <fillColumnFirst>true</fillColumnFirst>
         </hudson.plugins.view.dashboard.core.JobsPortlet>
         <hudson.plugins.view.dashboard.stats.StatJobs>
-          <id>dashboard_portlet_16715</id>
+          <id>dashboard_portlet_11896</id>
           <name>Job statistics</name>
         </hudson.plugins.view.dashboard.stats.StatJobs>
       </leftPortlets>
       <rightPortlets>
         <hudson.plugins.projectstats.portlet.NumBuildsPortlet plugin="project-stats-plugin@0.4">
-          <id>dashboard_portlet_579</id>
+          <id>dashboard_portlet_18107</id>
           <name>Project: Number of builds</name>
         </hudson.plugins.projectstats.portlet.NumBuildsPortlet>
         <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-          <id>dashboard_portlet_19943</id>
+          <id>dashboard_portlet_29054</id>
           <name>Unstable Jobs</name>
           <showOnlyFailedJobs>false</showOnlyFailedJobs>
           <recurse>false</recurse>
@@ -238,18 +247,18 @@
       </rightPortlets>
       <topPortlets>
         <hudson.plugins.view.dashboard.stats.StatBuilds>
-          <id>dashboard_portlet_24468</id>
+          <id>dashboard_portlet_2321</id>
           <name>Build statistics</name>
         </hudson.plugins.view.dashboard.stats.StatBuilds>
         <hudson.plugins.view.dashboard.builds.LatestBuilds>
-          <id>dashboard_portlet_17645</id>
+          <id>dashboard_portlet_5749</id>
           <name>Latest builds</name>
           <numBuilds>10</numBuilds>
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
       </topPortlets>
       <bottomPortlets>
         <hudson.plugins.view.dashboard.stats.StatSlaves>
-          <id>dashboard_portlet_12257</id>
+          <id>dashboard_portlet_21980</id>
           <name>Slaves statistics</name>
         </hudson.plugins.view.dashboard.stats.StatSlaves>
       </bottomPortlets>
