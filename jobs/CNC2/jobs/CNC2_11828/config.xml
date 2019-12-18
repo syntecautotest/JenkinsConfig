@@ -30,7 +30,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -58,7 +57,7 @@
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/hardware/CNC2/branches/release_CNC2_v10.118.22</remote>
+        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/hardware/CNC2/branches/release_CNC2_v10.118.28</remote>
         <credentialsId>1193</credentialsId>
         <local>.</local>
         <depthOption>infinity</depthOption>
@@ -88,7 +87,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
-  <customWorkspace>F:\Jenkins\workspace\CNC2\CNC2_11822</customWorkspace>
+  <customWorkspace>F:\Jenkins\workspace\CNC2\CNC2_11828</customWorkspace>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.tasks.BatchFile>
