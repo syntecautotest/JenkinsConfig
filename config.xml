@@ -274,14 +274,17 @@
         <string>API_10.116.54</string>
         <string>API_10.118.12</string>
         <string>API_10.118.22</string>
+        <string>API_10.118.28</string>
         <string>API_trunk</string>
         <string>CNC_10.116.54</string>
         <string>CNC_10.118.12</string>
         <string>CNC_10.118.22</string>
+        <string>CNC_10.118.28</string>
         <string>CNC_trunk</string>
         <string>MMI_10.116.54</string>
         <string>MMI_10.118.12</string>
         <string>MMI_10.118.22</string>
+        <string>MMI_10.118.28</string>
         <string>MMI_trunk</string>
       </jobNames>
       <jobFilters/>
