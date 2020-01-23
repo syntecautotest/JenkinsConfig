@@ -78,7 +78,7 @@
       <filter>*.props</filter>
       <target></target>
       <excludes></excludes>
-      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <selector class="com.tikal.jenkins.plugins.multijob.MultiJobBuildSelector" plugin="jenkins-multijob-plugin@1.24"/>
       <flatten>true</flatten>
       <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
