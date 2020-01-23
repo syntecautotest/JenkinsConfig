@@ -75,10 +75,11 @@
     </hudson.plugins.parameterizedtrigger.TriggerBuilder>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
       <project>GetData</project>
-      <filter>**/*.props</filter>
+      <filter>*.props</filter>
       <target></target>
       <excludes></excludes>
-      <selector class="com.tikal.jenkins.plugins.multijob.MultiJobBuildSelector" plugin="jenkins-multijob-plugin@1.24"/>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <flatten>true</flatten>
       <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.BatchFile>
