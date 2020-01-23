@@ -50,7 +50,16 @@ echo %MY_VAR%&gt;var.props&#xd;
 echo ANOTHER_VAR=1234&gt;another.props</command>
     </hudson.tasks.BatchFile>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>*.props</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+    </hudson.tasks.ArtifactArchiver>
+  </publishers>
   <buildWrappers>
     <EnvInjectBuildWrapper plugin="envinject@1.93.1">
       <info>
