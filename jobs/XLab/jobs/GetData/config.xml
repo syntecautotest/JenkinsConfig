@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -21,6 +22,9 @@
       <singleInstancePerSlave>false</singleInstancePerSlave>
       <slaveUtilizationPercentage>0</slaveUtilizationPercentage>
     </com.suryagaddipati.jenkins.SlaveUtilizationProperty>
+    <hudson.plugins.copyartifact.CopyArtifactPermissionProperty plugin="copyartifact@1.38.1">
+      <projectNameList/>
+    </hudson.plugins.copyartifact.CopyArtifactPermissionProperty>
     <hudson.plugins.throttleconcurrents.ThrottleJobProperty plugin="throttle-concurrents@1.9.0">
       <maxConcurrentPerNode>0</maxConcurrentPerNode>
       <maxConcurrentTotal>0</maxConcurrentTotal>
