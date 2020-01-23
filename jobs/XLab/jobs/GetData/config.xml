@@ -45,7 +45,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.BatchFile>
-      <command>echo %MY_VAR%</command>
+      <command>echo %MY_VAR%&#xd;
+echo %MY_VAR%&gt;var.props&#xd;
+echo ANOTHER_VAR=1234&gt;another.props</command>
     </hudson.tasks.BatchFile>
   </builders>
   <publishers/>
