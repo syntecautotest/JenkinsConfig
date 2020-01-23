@@ -46,7 +46,7 @@
   <builders>
     <hudson.tasks.BatchFile>
       <command>echo %MY_VAR%&#xd;
-echo %MY_VAR%&gt;var.props&#xd;
+echo MY_VAR=%MY_VAR%&gt;var.props&#xd;
 echo ANOTHER_VAR=1234&gt;another.props</command>
     </hudson.tasks.BatchFile>
   </builders>
