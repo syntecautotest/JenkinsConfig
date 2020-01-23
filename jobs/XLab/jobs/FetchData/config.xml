@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -72,6 +73,20 @@
         </hudson.plugins.parameterizedtrigger.BlockableBuildTriggerConfig>
       </configs>
     </hudson.plugins.parameterizedtrigger.TriggerBuilder>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
+      <project>GetData</project>
+      <filter>*.props</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="com.tikal.jenkins.plugins.multijob.MultiJobBuildSelector" plugin="jenkins-multijob-plugin@1.24"/>
+      <flatten>true</flatten>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <EnvInjectBuilder plugin="envinject@1.93.1">
+      <info>
+        <propertiesFilePath>*.props</propertiesFilePath>
+      </info>
+    </EnvInjectBuilder>
     <hudson.tasks.BatchFile>
       <command>echo %MY_VAR%</command>
     </hudson.tasks.BatchFile>
