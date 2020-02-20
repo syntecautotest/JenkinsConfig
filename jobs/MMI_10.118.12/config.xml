@@ -170,7 +170,7 @@ POPD</command>
     </hudson.tasks.Fingerprinter>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>marskao@syntecclub.com.tw albert1002@syntecclub.com.tw hebe.am96g@g2.nctu.edu.tw yoana.shih@syntecclub.com.tw chengwei.lin@syntecclub.com.tw evolution6423@yahoo.com.tw swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw shockspy@syntecclub.com.tw Young@syntecclub.com.tw</recipients>
+      <recipients>marskao@syntecclub.com.tw albert1002@syntecclub.com.tw hebe.am96g@g2.nctu.edu.tw yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw shockspy@syntecclub.com.tw Young@syntecclub.com.tw JWLee@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
