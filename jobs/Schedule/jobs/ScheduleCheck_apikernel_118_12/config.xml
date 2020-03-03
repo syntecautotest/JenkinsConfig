@@ -128,7 +128,7 @@ BRANCH_VER=v10_118_12</properties>
       </threshold>
     </hudson.tasks.BuildTrigger>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>wppqqppq@gmail.com swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw Young@syntecclub.com.tw</recipients>
+      <recipients>wppqqppq@gmail.com swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw Young@syntecclub.com.tw JWLee@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
