@@ -81,7 +81,7 @@ return map</groovyScriptContent>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
   <assignedNode>TESTMAN3_BM</assignedNode>
   <canRoam>false</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
