@@ -30,7 +30,6 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
@@ -49,7 +48,7 @@
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/cnckernel/branches/release_v10.118.22</remote>
+        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/cnckernel/branches/release_v10.118.23</remote>
         <credentialsId>1193</credentialsId>
         <local>.</local>
         <depthOption>infinity</depthOption>
