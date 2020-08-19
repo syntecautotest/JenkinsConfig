@@ -33,7 +33,7 @@
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
-        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.22&quot; ];
+        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.23&quot; ];
 return map</groovyScriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
