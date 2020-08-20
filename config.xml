@@ -56,7 +56,9 @@
       </role>
       <role name="anonymous" pattern=".*">
         <permissions/>
-        <assignedSIDs/>
+        <assignedSIDs>
+          <sid>anonymous</sid>
+        </assignedSIDs>
       </role>
       <role name="viewer" pattern=".*">
         <permissions>
