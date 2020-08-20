@@ -77,7 +77,7 @@
     <roleMap type="slaveRoles"/>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
-    <disableSignup>false</disableSignup>
+    <disableSignup>true</disableSignup>
     <enableCaptcha>false</enableCaptcha>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
