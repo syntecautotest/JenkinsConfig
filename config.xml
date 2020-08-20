@@ -52,6 +52,7 @@
         </permissions>
         <assignedSIDs>
           <sid>anonymous</sid>
+          <sid>wppqqppq</sid>
         </assignedSIDs>
       </role>
       <role name="anonymous" pattern=".*">
