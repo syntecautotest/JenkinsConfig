@@ -8,6 +8,7 @@
   <mode>EXCLUSIVE</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy">
+    <roleMap type="projectRoles"/>
     <roleMap type="globalRoles">
       <role name="admin" pattern=".*">
         <permissions>
@@ -51,7 +52,6 @@
         </permissions>
         <assignedSIDs>
           <sid>anonymous</sid>
-          <sid>wppqqppq</sid>
         </assignedSIDs>
       </role>
       <role name="anonymous" pattern=".*">
@@ -59,6 +59,7 @@
         <assignedSIDs/>
       </role>
     </roleMap>
+    <roleMap type="slaveRoles"/>
   </authorizationStrategy>
   <securityRealm class="hudson.security.SecurityRealm$None"/>
   <disableRememberMe>false</disableRememberMe>
