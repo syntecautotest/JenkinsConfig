@@ -65,7 +65,9 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.model.PaneStatusProperties>
-      <collapsed/>
+      <collapsed>
+        <string>buildHistory</string>
+      </collapsed>
     </hudson.model.PaneStatusProperties>
     <hudson.model.MyViewsProperty>
       <views>
