@@ -38,7 +38,6 @@
           <permission>hudson.model.Item.Create</permission>
           <permission>hudson.model.Item.Workspace</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
-          <permission>hudson.model.Computer.Provision</permission>
           <permission>hudson.model.Run.Replay</permission>
           <permission>jenkins.metrics.api.Metrics.ThreadDump</permission>
           <permission>hudson.model.View.Read</permission>
