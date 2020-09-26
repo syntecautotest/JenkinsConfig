@@ -84,7 +84,7 @@ return map</groovyScriptContent>
   <scm class="hudson.scm.NullSCM"/>
   <assignedNode>Schedule_BM</assignedNode>
   <canRoam>false</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>true</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <triggers/>
