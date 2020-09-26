@@ -2,6 +2,7 @@
 <project>
   <actions/>
   <description></description>
+  <displayName>ScheduleParamJob_Test</displayName>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -30,7 +31,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -154,7 +154,7 @@ POPD</command>
       </runCondition>
       <conditionalbuilders>
         <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
-          <project>ScheduleParam</project>
+          <project>ScheduleParam_Test</project>
           <filter>${BUILD_DIR}/*rror/**</filter>
           <target>Artifacts/${BUILD_DIR}</target>
           <excludes></excludes>
