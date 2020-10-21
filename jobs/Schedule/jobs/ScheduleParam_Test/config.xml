@@ -79,7 +79,7 @@ return map</groovyScriptContent>
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>BSNAME</name>
-          <description>the computer name which is responsible for processing the daily build</description>
+          <description>UNC of the computer which is responsible for processing the daily build</description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
               <string>TestmanBM</string>
