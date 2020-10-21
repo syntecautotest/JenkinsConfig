@@ -51,7 +51,7 @@
               <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
                 <properties>SECTION=CNC
 BRANCH_VER=trunk
-BMNAME=BS1VM1</properties>
+BSNAME=BS1VM1</properties>
               </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
             </configs>
             <projects>ScheduleParam_Test</projects>
