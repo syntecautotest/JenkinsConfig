@@ -54,7 +54,7 @@ BRANCH_VER=trunk
 BMNAME=BS1VM1</properties>
               </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
             </configs>
-            <projects>ScheduleParam</projects>
+            <projects>ScheduleParam_Test</projects>
             <condition>ALWAYS</condition>
             <triggerWithNoParameters>false</triggerWithNoParameters>
             <triggerFromChildProjects>false</triggerFromChildProjects>
