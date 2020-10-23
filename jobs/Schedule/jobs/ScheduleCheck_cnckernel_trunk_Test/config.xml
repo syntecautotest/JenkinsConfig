@@ -122,9 +122,9 @@ BSNAME=BS1VM1</properties>
     <hudson.tasks.BuildTrigger>
       <childProjects>ScheduleCheck_apikernel_trunk_Test</childProjects>
       <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
+        <name>FAILURE</name>
+        <ordinal>2</ordinal>
+        <color>RED</color>
         <completeBuild>true</completeBuild>
       </threshold>
     </hudson.tasks.BuildTrigger>
