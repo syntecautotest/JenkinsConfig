@@ -104,10 +104,9 @@ return map</groovyScriptContent>
   <builders>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
-SET ROOT=%BUILD_DIR:/=\%&#xd;
-&#xd;
 IF %BSNAME% == TestmanBM GOTO END&#xd;
 &#xd;
+SET ROOT=%BUILD_DIR:/=\%&#xd;
 IF EXIST %ROOT% rd /s /q %ROOT%\..&#xd;
 &#xd;
 IF EXIST \\%BSNAME%\Schedule_BK\%ROOT%\Error (&#xd;
