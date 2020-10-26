@@ -110,7 +110,7 @@ SET ROOT=%BUILD_DIR:/=\%&#xd;
 IF EXIST %ROOT% rd /s /q %ROOT%\..&#xd;
 &#xd;
 IF EXIST \\%BSNAME%\Schedule\%ROOT%\Error (&#xd;
-	echo D | xcopy /s \\%BSNAME%\Schedule_BK\%ROOT%\Error %ROOT%\Error&#xd;
+	echo D | xcopy /s \\%BSNAME%\Schedule\%ROOT%\Error %ROOT%\Error&#xd;
 )&#xd;
 &#xd;
 :END</command>
