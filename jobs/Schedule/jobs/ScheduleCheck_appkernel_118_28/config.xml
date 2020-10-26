@@ -50,7 +50,8 @@
             <configs>
               <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
                 <properties>SECTION=MMI
-BRANCH_VER=v10_118_28</properties>
+BRANCH_VER=v10_118_28
+BSNAME=BS2VM1</properties>
               </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
             </configs>
             <projects>ScheduleParam</projects>
@@ -119,7 +120,7 @@ BRANCH_VER=v10_118_28</properties>
   </builders>
   <publishers>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>wppqqppq@gmail.com swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw Young@syntecclub.com.tw</recipients>
+      <recipients>wppqqppq@gmail.com swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw Young@syntecclub.com.tw jwlee@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>true</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
