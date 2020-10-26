@@ -107,10 +107,10 @@ return map</groovyScriptContent>
 IF %BSNAME% == TestmanBM GOTO END&#xd;
 &#xd;
 SET ROOT=%BUILD_DIR:/=\%&#xd;
-IF EXIST %ROOT% rd /s /q %ROOT%\..&#xd;
+IF EXIST %ROOT% rd /s /q %ROOT%\&#xd;
 &#xd;
-IF EXIST \\%BSNAME%\Schedule\%ROOT%\Error (&#xd;
-	echo D | xcopy /s \\%BSNAME%\Schedule\%ROOT%\Error %ROOT%\Error&#xd;
+IF EXIST \\%BSNAME%\OpenCNC\Schedule\%ROOT%\Error (&#xd;
+	echo D | xcopy /s \\%BSNAME%\OpenCNC\Schedule\%ROOT%\Error %ROOT%\Error&#xd;
 )&#xd;
 &#xd;
 :END</command>
