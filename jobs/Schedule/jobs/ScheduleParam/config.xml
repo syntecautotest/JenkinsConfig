@@ -104,6 +104,8 @@ return map</groovyScriptContent>
   <builders>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
+REM ref: SWAR-546&#xd;
+&#xd;
 IF %BSNAME% == TestmanBM GOTO END&#xd;
 &#xd;
 SET ROOT=%BUILD_DIR:/=\%&#xd;
