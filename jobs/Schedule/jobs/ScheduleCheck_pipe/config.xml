@@ -41,7 +41,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>30 10 * * 2-6</spec>
+      <spec>0 9 * * 2-6</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
