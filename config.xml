@@ -237,12 +237,15 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>API_10.118.24</string>
         <string>API_10.118.28</string>
+        <string>API_10.118.40</string>
         <string>API_trunk</string>
         <string>CNC_10.118.24</string>
         <string>CNC_10.118.28</string>
+        <string>CNC_10.118.40</string>
         <string>CNC_trunk</string>
         <string>MMI_10.118.24</string>
         <string>MMI_10.118.28</string>
+        <string>MMI_10.118.40</string>
         <string>MMI_trunk</string>
       </jobNames>
       <jobFilters/>
