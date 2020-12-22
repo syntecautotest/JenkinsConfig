@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Build &apos;apikernel\API_118.40x&apos; branch whose GIT log were changed</description>
+  <description>Build &apos;products/LaserCtrl/branches/10.118.40&apos; branch whose SVN log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -30,7 +30,6 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -48,7 +47,7 @@ return map</groovyScriptContent>
         <org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition plugin="nodelabelparameter@1.7.2">
           <name></name>
           <description></description>
-          <defaultValue>TESTMAN3_BM</defaultValue>
+          <defaultValue>BM</defaultValue>
           <allNodesMatchingLabel>false</allNodesMatchingLabel>
           <triggerIfResult>allCases</triggerIfResult>
           <nodeEligibility class="org.jvnet.jenkins.plugins.nodelabelparameter.node.AllNodeEligibility"/>
@@ -65,28 +64,28 @@ return map</groovyScriptContent>
     </jenkins.model.BuildDiscarderProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
-    <configVersion>2</configVersion>
-    <userRemoteConfigs>
-      <hudson.plugins.git.UserRemoteConfig>
-        <url>http://10.10.40.251:30000/CNC/apikernel.git</url>
-        <credentialsId>deb8f94b-c883-4da1-beb4-d2b6362b887e</credentialsId>
-      </hudson.plugins.git.UserRemoteConfig>
-    </userRemoteConfigs>
-    <branches>
-      <hudson.plugins.git.BranchSpec>
-        <name>*/API_118.40x</name>
-      </hudson.plugins.git.BranchSpec>
-    </branches>
-    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <submoduleCfg class="list"/>
-    <extensions>
-      <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
-    </extensions>
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
+    <locations>
+      <hudson.scm.SubversionSCM_-ModuleLocation>
+        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/products/LaserCtrl/branches/release_LaserCtrl_v10.118.40</remote>
+        <credentialsId>b16cae03-3606-4a57-b357-cd297d0594a9</credentialsId>
+        <local>.</local>
+        <depthOption>infinity</depthOption>
+        <ignoreExternalsOption>true</ignoreExternalsOption>
+      </hudson.scm.SubversionSCM_-ModuleLocation>
+    </locations>
+    <excludedRegions></excludedRegions>
+    <includedRegions></includedRegions>
+    <excludedUsers></excludedUsers>
+    <excludedRevprop></excludedRevprop>
+    <excludedCommitMessages></excludedCommitMessages>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateWithCleanUpdater"/>
+    <ignoreDirPropChanges>false</ignoreDirPropChanges>
+    <filterChangelog>false</filterChangelog>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
-  <assignedNode>TESTMAN3_BM</assignedNode>
+  <assignedNode>BM</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -117,7 +116,7 @@ PUSHD %WORKSPACE%\Build&#xd;
 echo %CD%&#xd;
 &#xd;
 echo.&gt;temp.txt&#xd;
-echo SET XXOCSDKPOOL=%CD%&gt;&gt;temp.txt&#xd;
+echo SET XXLaserCtrlSDKPOOL=%CD%&gt;&gt;temp.txt&#xd;
 echo.&gt;&gt;temp.txt&#xd;
 copy /y SetProjectEnv.bat+temp.txt SetProjectEnv.bat&#xd;
 &#xd;
@@ -157,7 +156,7 @@ POPD&#xd;
     </hudson.tasks.Fingerprinter>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw JWLee@syntecclub.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw shockspy@syntecclub.com.tw</recipients>
+      <recipients>evolution6423@yahoo.com.tw JWLee@syntecclub.com.tw simon@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>true</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
@@ -179,7 +178,7 @@ POPD&#xd;
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
     <org.jenkinsci.plugins.environmentdashboard.DashboardBuilder plugin="environment-dashboard@1.1.7">
       <nameOfEnv>SVN Check Build on XP VM</nameOfEnv>
-      <componentName>apikernel</componentName>
+      <componentName>LaserCtrl</componentName>
       <buildNumber>${BUILD_NUMBER}</buildNumber>
       <buildJob></buildJob>
       <packageName>${XX_BRANCH}</packageName>
@@ -188,9 +187,7 @@ POPD&#xd;
     </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
     <EnvInjectBuildWrapper plugin="envinject@1.93.1">
       <info>
-        <scriptContent>PUSHD %WORKSPACE%
-git log -1
-POPD</scriptContent>
+        <scriptContent>svn log %SVN_URL% -r %SVN_REVISION%</scriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
     </EnvInjectBuildWrapper>
