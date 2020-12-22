@@ -58,7 +58,7 @@
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>http://developer.syntecclub.com.tw:815/OpenCNC/hardware/CNC2/branches/release_CNC2_v10.118.40</remote>
-        <credentialsId>1193</credentialsId>
+        <credentialsId>b16cae03-3606-4a57-b357-cd297d0594a9</credentialsId>
         <local>.</local>
         <depthOption>infinity</depthOption>
         <ignoreExternalsOption>true</ignoreExternalsOption>
