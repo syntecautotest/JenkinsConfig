@@ -128,7 +128,7 @@ rd /s /q OCSDK&#xd;
 for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
 	echo %%~zi&#xd;
 	if %%~zi gtr 0 (&#xd;
-		echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
+		echo Bulid Failed Due to %SVN_URL% at %SVN_REVISION%&#xd;
 exit 1&#xd;
 POPD&#xd;
 	)&#xd;
