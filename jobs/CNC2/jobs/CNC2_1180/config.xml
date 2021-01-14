@@ -54,24 +54,24 @@
     </hudson.model.ParametersDefinitionProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
-    <locations>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/hardware/CNC2/branches/release_CNC2_v10.118.0</remote>
-        <credentialsId>1193</credentialsId>
-        <local>.</local>
-        <depthOption>infinity</depthOption>
-        <ignoreExternalsOption>true</ignoreExternalsOption>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-    </locations>
-    <excludedRegions></excludedRegions>
-    <includedRegions></includedRegions>
-    <excludedUsers></excludedUsers>
-    <excludedRevprop></excludedRevprop>
-    <excludedCommitMessages>^(publish|update release note).*</excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.UpdateWithCleanUpdater"/>
-    <ignoreDirPropChanges>false</ignoreDirPropChanges>
-    <filterChangelog>false</filterChangelog>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>http://10.10.40.251:30000/CNC/CNC2.git</url>
+        <credentialsId>deb8f94b-c883-4da1-beb4-d2b6362b887e</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/release_CNC2_v10.118.0</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
+    </extensions>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
@@ -101,7 +101,7 @@ echo === check ===&#xd;
 for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
 	echo %CD%\error\check.log size = %%~zi&#xd;
 	if %%~zi gtr 0 (&#xd;
-		echo Bulid Failed Due to %SVN_URL% at %SVN_REVISION%&#xd;
+		echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
 	POPD&#xd;
 	exit 1&#xd;
 	) else (&#xd;
@@ -161,7 +161,9 @@ echo === Jenkins Win Cmd finish ===&#xd;
     </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
     <EnvInjectBuildWrapper plugin="envinject@1.93.1">
       <info>
-        <scriptContent>svn log %SVN_URL% -r %SVN_REVISION%</scriptContent>
+        <scriptContent>PUSHD %WORKSPACE%
+git log -1
+POPD</scriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
     </EnvInjectBuildWrapper>
