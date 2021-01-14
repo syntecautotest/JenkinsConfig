@@ -72,6 +72,7 @@
     <hudson.model.PaneStatusProperties>
       <collapsed>
         <string>executors</string>
+        <string>buildHistory</string>
       </collapsed>
     </hudson.model.PaneStatusProperties>
     <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
