@@ -100,7 +100,7 @@ echo === check ===&#xd;
 for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
 	echo %CD%\error\check.log size = %%~zi&#xd;
 	if %%~zi gtr 0 (&#xd;
-		echo Bulid Failed Due to %SVN_URL% at %SVN_REVISION%&#xd;
+		echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
 	POPD&#xd;
 	exit 1&#xd;
 	) else (&#xd;
@@ -160,7 +160,9 @@ echo === Jenkins Win Cmd finish ===&#xd;
     </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
     <EnvInjectBuildWrapper plugin="envinject@1.93.1">
       <info>
-        <scriptContent>svn log %SVN_URL% -r %SVN_REVISION%</scriptContent>
+        <scriptContent>PUSHD %WORKSPACE%
+git log -1
+POPD</scriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
     </EnvInjectBuildWrapper>
