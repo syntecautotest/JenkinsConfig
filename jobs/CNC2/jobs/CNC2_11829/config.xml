@@ -30,6 +30,7 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
+      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -39,6 +40,7 @@
       <keepJenkinsSystemVariables>true</keepJenkinsSystemVariables>
       <keepBuildVariables>true</keepBuildVariables>
       <overrideBuildParameters>false</overrideBuildParameters>
+      <contributors/>
     </EnvInjectJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
@@ -77,7 +79,7 @@
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
   <assignedNode>CNC2</assignedNode>
   <canRoam>false</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
@@ -89,7 +91,9 @@
   <concurrentBuild>true</concurrentBuild>
   <customWorkspace>F:\Jenkins\workspace\CNC2\CNC2_11829</customWorkspace>
   <builders>
-    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
+    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1">
+      <issueSelector class="hudson.plugins.jira.selector.DefaultIssueSelector"/>
+    </hudson.plugins.jira.JiraEnvironmentVariableBuilder>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
 echo === Jenkins Win Cmd begin ===&#xd;
