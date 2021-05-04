@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Build &apos;appkernel\branches\10.118.40&apos; branch whose SVN log were changed</description>
+  <description>Build &apos;appkernel\branches\10.118.41&apos; branch whose SVN log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -30,11 +30,10 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
-        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.40&quot; ];
+        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.41&quot; ];
 return map</groovyScriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
@@ -68,7 +67,7 @@ return map</groovyScriptContent>
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/appkernel/branches/AppKernel_10.118.40</remote>
+        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/appkernel/branches/AppKernel_10.118.41</remote>
         <credentialsId>b16cae03-3606-4a57-b357-cd297d0594a9</credentialsId>
         <local>.</local>
         <depthOption>infinity</depthOption>
@@ -101,7 +100,7 @@ return map</groovyScriptContent>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
-      <project>CNC_10.118.40</project>
+      <project>CNC_10.118.41</project>
       <filter>Build/Release/**/CNCSDK*.zip</filter>
       <target>.</target>
       <excludes></excludes>
@@ -110,7 +109,7 @@ return map</groovyScriptContent>
       <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
-      <project>API_10.118.40</project>
+      <project>API_10.118.41</project>
       <filter>Build/Release/**/APISDK*.zip</filter>
       <target></target>
       <excludes></excludes>
