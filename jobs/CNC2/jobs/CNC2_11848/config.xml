@@ -131,7 +131,7 @@ echo === Jenkins Win Cmd finish ===&#xd;
       <targets>Build/release/**</targets>
     </hudson.tasks.Fingerprinter>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>evolution6423@yahoo.com.tw firticket@syntecclub.com.tw mark.chen@syntecclub.com.tw jwlee@syntecclub.com.tw</recipients>
+      <recipients>evolution6423@yahoo.com.tw firticket@syntecclub.com.tw mark.chen@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
