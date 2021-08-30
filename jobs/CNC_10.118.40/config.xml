@@ -52,7 +52,6 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
     <locations>
@@ -125,7 +124,7 @@ POPD</command>
     </hudson.tasks.Fingerprinter>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw JWLee@syntecclub.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw</recipients>
+      <recipients>yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
