@@ -32,7 +32,6 @@
       <paramsToUseForLimit></paramsToUseForLimit>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <assignedNode>master</assignedNode>
@@ -130,7 +129,7 @@ BSNAME=BS1VM1</properties>
       </threshold>
     </hudson.tasks.BuildTrigger>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>wppqqppq@gmail.com jwlee@syntecclub.com.tw</recipients>
+      <recipients>wppqqppq@gmail.com chuck.hsu@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>true</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
