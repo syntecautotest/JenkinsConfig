@@ -76,7 +76,7 @@
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
   <assignedNode>BM</assignedNode>
   <canRoam>false</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
@@ -87,7 +87,9 @@
   </triggers>
   <concurrentBuild>true</concurrentBuild>
   <builders>
-    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
+    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1">
+      <issueSelector class="hudson.plugins.jira.selector.DefaultIssueSelector"/>
+    </hudson.plugins.jira.JiraEnvironmentVariableBuilder>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
 rem normalize working directory&#xd;
