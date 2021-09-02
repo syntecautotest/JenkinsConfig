@@ -36,7 +36,7 @@
         <org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition plugin="nodelabelparameter@1.7.2">
           <name></name>
           <description></description>
-          <defaultValue>BM</defaultValue>
+          <defaultValue>BM_DEBUG</defaultValue>
           <allNodesMatchingLabel>false</allNodesMatchingLabel>
           <triggerIfResult>allCases</triggerIfResult>
           <nodeEligibility class="org.jvnet.jenkins.plugins.nodelabelparameter.node.AllNodeEligibility"/>
@@ -74,7 +74,7 @@
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
-  <assignedNode>BM</assignedNode>
+  <assignedNode>BM_DEBUG</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -87,9 +87,7 @@
   </triggers>
   <concurrentBuild>true</concurrentBuild>
   <builders>
-    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1">
-      <issueSelector class="hudson.plugins.jira.selector.DefaultIssueSelector"/>
-    </hudson.plugins.jira.JiraEnvironmentVariableBuilder>
+    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
 rem normalize working directory&#xd;
