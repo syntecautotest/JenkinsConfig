@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Build &apos;appkernel\branches\10.118.41&apos; branch whose SVN log were changed</description>
+  <description>Build &apos;appkernel\branches\10.118.48&apos; branch whose SVN log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
