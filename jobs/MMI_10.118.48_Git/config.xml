@@ -179,7 +179,7 @@ POPD</command>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
       <recipients>yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw shockspy@syntecclub.com.tw Young@syntecclub.com.tw york.tsai@syntecclub.com.tw kevin.chien@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
-      <dontNotifyEveryUnstableBuild>true</dontNotifyEveryUnstableBuild>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
   </publishers>
