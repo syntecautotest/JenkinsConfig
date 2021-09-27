@@ -39,10 +39,6 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>MMI_trunk</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>API_trunk</string>
           <boolean>true</boolean>
         </entry>
