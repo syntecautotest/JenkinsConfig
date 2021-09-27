@@ -15,6 +15,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>MMI_10.118.24</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>CNC2_11822</string>
           <boolean>true</boolean>
         </entry>
