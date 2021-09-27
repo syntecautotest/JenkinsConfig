@@ -15,27 +15,11 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>CNC2/CNC2_11824</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
           <string>CNC_10.118.0</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>CNC_trunk</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>MakeRevertPack</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>SaveOQCDB</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>SaveOQCFileConfig</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -47,15 +31,35 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>RevertOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC2/CNC2_11824</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>CNC_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_10.118.12</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SaveOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SaveOQCFileConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>RecordConfig</string>
           <boolean>true</boolean>
         </entry>
         <entry>
           <string>CNC_10.116.54</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>RevertOQCDB</string>
           <boolean>true</boolean>
         </entry>
       </data>
