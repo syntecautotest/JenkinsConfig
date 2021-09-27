@@ -15,6 +15,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>MMI_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>MMI_10.118.41</string>
           <boolean>true</boolean>
         </entry>

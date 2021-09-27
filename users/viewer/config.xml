@@ -47,6 +47,10 @@
           <boolean>false</boolean>
         </entry>
         <entry>
+          <string>MMI_trunk</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>CNC_trunk</string>
           <boolean>true</boolean>
         </entry>

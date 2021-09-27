@@ -253,7 +253,7 @@
         <string>MMI_10.118.40</string>
         <string>MMI_10.118.41</string>
         <string>MMI_10.118.48</string>
-        <string>MMI_trunk_Git</string>
+        <string>MMI_trunk</string>
       </jobNames>
       <jobFilters/>
       <columns/>
