@@ -66,14 +66,6 @@
           <boolean>false</boolean>
         </entry>
         <entry>
-          <string>CNC_10.116.24</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
-          <string>CNC_10.118.0</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>API_10.118.0</string>
           <boolean>true</boolean>
         </entry>
@@ -90,19 +82,51 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>CNC_10.116.x</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
           <string>RevertOQCDB</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>API_trunk</string>
+          <string>CNC_trunk</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>CNC_trunk</string>
+          <string>SaveOQCDB</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_10.118.24</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_10.118.29</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>API_10.116.24</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>RecordConfig</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_10.118.28</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.24</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.118.0</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC_10.116.x</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>API_trunk</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -118,15 +142,7 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>SaveOQCDB</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>SaveOQCFileConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.24</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -134,23 +150,11 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>API_10.116.24</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>MMI_10.118.0</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>RecordConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>CNC_10.116.54</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.28</string>
           <boolean>true</boolean>
         </entry>
       </data>
