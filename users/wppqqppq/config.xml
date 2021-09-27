@@ -66,6 +66,10 @@
           <boolean>false</boolean>
         </entry>
         <entry>
+          <string>MMI_10.118.40</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>API_10.118.0</string>
           <boolean>true</boolean>
         </entry>
