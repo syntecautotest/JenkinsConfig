@@ -149,6 +149,10 @@
           <string>CNC_10.116.54</string>
           <boolean>true</boolean>
         </entry>
+        <entry>
+          <string>MMI_10.118.28</string>
+          <boolean>true</boolean>
+        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
