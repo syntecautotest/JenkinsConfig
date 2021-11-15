@@ -32,6 +32,7 @@
       <paramsToUseForLimit></paramsToUseForLimit>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <assignedNode>master</assignedNode>
@@ -48,7 +49,7 @@
   <builders/>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>ScheduleCheck_cnckernel_118_24,ScheduleCheck_cnckernel_118_28,ScheduleCheck_cnckernel_trunk</childProjects>
+      <childProjects>ScheduleCheck_cnckernel_118_28,ScheduleCheck_cnckernel_118_40,ScheduleCheck_cnckernel_118_41,ScheduleCheck_cnckernel_trunk</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
