@@ -31,6 +31,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>ScheduleCheck_apikernel_118_40</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>CNC2_TEST</string>
           <boolean>true</boolean>
         </entry>

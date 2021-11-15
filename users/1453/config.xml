@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>raymond.ho</fullName>
+  <fullName>1453</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwZJTDJKiqvRtEKTPDsIohvGobB25+25ofXK3MX698uohXfpuGaQhARjHoa7VggYbhPFzFPRCgYBHSuSAaqjBBQw==}</apiToken>
+      <apiToken>{AQAAABAAAAAwy971m28mkQyzXP/2dkQxZMZYvfSZKUp1x9GeHprZ/wHzvweyOh+olQAMGIAq7+mpnvuKLmFhsDpw3w01vpSfqg==}</apiToken>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
@@ -11,63 +11,7 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>MMI_10.118.40</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.41</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MakeRevertPack</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>ScheduleCheck_apikernel_118_40</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>CNC2_11822</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>RevertOQCDB</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_trunk</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.48</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.12</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>SaveOQCDB</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>SaveOQCFileConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.24</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.29</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>RecordConfig</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>MMI_10.118.28</string>
           <boolean>true</boolean>
         </entry>
       </data>

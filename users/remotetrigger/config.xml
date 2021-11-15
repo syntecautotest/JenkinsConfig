@@ -27,6 +27,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>ScheduleCheck_apikernel_118_40</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>CNC2_11822</string>
           <boolean>true</boolean>
         </entry>

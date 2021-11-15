@@ -23,6 +23,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>ScheduleCheck_apikernel_118_40</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>MMI_10.118.48</string>
           <boolean>true</boolean>
         </entry>

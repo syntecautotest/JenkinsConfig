@@ -15,11 +15,19 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>MMI_trunk</string>
+          <string>MMI_10.118.41</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>MMI_10.118.41</string>
+          <string>ScheduleCheck_apikernel_118_40</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>CNC2_11822</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>MMI_trunk</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -44,10 +52,6 @@
         </entry>
         <entry>
           <string>MMI_10.118.29</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>CNC2_11822</string>
           <boolean>true</boolean>
         </entry>
         <entry>
