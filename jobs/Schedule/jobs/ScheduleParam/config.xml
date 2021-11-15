@@ -62,6 +62,10 @@ return map</groovyScriptContent>
               <string>v10_118_23</string>
               <string>v10_118_24</string>
               <string>v10_118_28</string>
+              <string>v10_118_40</string>
+              <string>v10_118_41</string>
+              <string>v10_118_48</string>
+              <string>v10_118_52</string>
               <string>trunk</string>
             </a>
           </choices>
