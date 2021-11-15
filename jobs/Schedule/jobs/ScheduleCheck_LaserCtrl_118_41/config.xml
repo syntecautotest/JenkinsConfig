@@ -30,7 +30,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
@@ -51,7 +50,7 @@
             <configs>
               <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
                 <properties>SECTION=LaserCtrl
-BRANCH_VER=v10_118_40
+BRANCH_VER=v10_118_41
 BSNAME=BS1VM1</properties>
               </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
             </configs>
@@ -121,7 +120,7 @@ BSNAME=BS1VM1</properties>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>ScheduleCheck_apikernel_118_40</childProjects>
+      <childProjects>ScheduleCheck_apikernel_118_41</childProjects>
       <threshold>
         <name>FAILURE</name>
         <ordinal>2</ordinal>
