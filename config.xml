@@ -233,17 +233,11 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>API_10.118.24</string>
-        <string>API_10.118.28</string>
-        <string>API_10.118.29</string>
         <string>API_10.118.40</string>
         <string>API_10.118.41</string>
         <string>API_10.118.48</string>
         <string>API_10.118.52</string>
         <string>API_trunk</string>
-        <string>CNC_10.118.24</string>
-        <string>CNC_10.118.28</string>
-        <string>CNC_10.118.29</string>
         <string>CNC_10.118.40</string>
         <string>CNC_10.118.41</string>
         <string>CNC_10.118.48</string>
@@ -253,9 +247,7 @@
         <string>LaserCtrl_10.118.41</string>
         <string>LaserCtrl_10.118.48</string>
         <string>LaserCtrl_10.118.52</string>
-        <string>MMI_10.118.24</string>
-        <string>MMI_10.118.28</string>
-        <string>MMI_10.118.29</string>
+        <string>LaserCtrl_trunk</string>
         <string>MMI_10.118.40</string>
         <string>MMI_10.118.41</string>
         <string>MMI_10.118.48</string>
