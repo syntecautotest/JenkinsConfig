@@ -30,7 +30,6 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -157,7 +156,7 @@ POPD&#xd;
     </hudson.tasks.Fingerprinter>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>evolution6423@yahoo.com.tw simon@syntecclub.com.tw crystal.chiang@syntecclub.com.tw belle.yu@syntecclub.com.tw bob.bao@syntecclub.com.tw york.tsai@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
+      <recipients>evolution6423@yahoo.com.tw simon@syntecclub.com.tw crystal.chiang@syntecclub.com.tw belle.yu@syntecclub.com.tw york.tsai@syntecclub.com.tw chuck.hsu@syntecclub.com.tw bob.bao@syntecclub.com.tw wen.huang@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>true</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
