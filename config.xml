@@ -237,21 +237,25 @@
         <string>API_10.118.41</string>
         <string>API_10.118.48</string>
         <string>API_10.118.52</string>
+        <string>API_10.118.56</string>
         <string>API_trunk</string>
         <string>CNC_10.118.40</string>
         <string>CNC_10.118.41</string>
         <string>CNC_10.118.48</string>
         <string>CNC_10.118.52</string>
+        <string>CNC_10.118.56</string>
         <string>CNC_trunk</string>
         <string>LaserCtrl_10.118.40</string>
         <string>LaserCtrl_10.118.41</string>
         <string>LaserCtrl_10.118.48</string>
         <string>LaserCtrl_10.118.52</string>
+        <string>LaserCtrl_10.118.56</string>
         <string>LaserCtrl_trunk</string>
         <string>MMI_10.118.40</string>
         <string>MMI_10.118.41</string>
         <string>MMI_10.118.48</string>
         <string>MMI_10.118.52</string>
+        <string>MMI_10.118.56</string>
         <string>MMI_trunk</string>
       </jobNames>
       <jobFilters/>
