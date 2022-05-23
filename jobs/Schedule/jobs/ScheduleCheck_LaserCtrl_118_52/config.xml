@@ -120,7 +120,7 @@ BSNAME=BS1VM1</properties>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>ScheduleCheck_apikernel_118_52</childProjects>
+      <childProjects>ScheduleCheck_PrdRes_118_52</childProjects>
       <threshold>
         <name>FAILURE</name>
         <ordinal>2</ordinal>
