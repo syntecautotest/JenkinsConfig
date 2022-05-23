@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Build &apos;PrdRes\release_v10.118.52&apos; branch whose GIT log were changed</description>
+  <description>Build &apos;PrdRes\release_v10.118.56&apos; branch whose GIT log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -30,11 +30,10 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
-        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.52&quot; ];
+        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.56&quot; ];
 return map</groovyScriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
@@ -75,7 +74,7 @@ return map</groovyScriptContent>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/release_v10.118.52</name>
+        <name>*/release_v10.118.56</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -101,7 +100,7 @@ return map</groovyScriptContent>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
-      <project>CNC_10.118.52</project>
+      <project>CNC_10.118.56</project>
       <filter>Build/Release/**/CNCSDK*.zip</filter>
       <target>Build/OCSDK</target>
       <excludes></excludes>
