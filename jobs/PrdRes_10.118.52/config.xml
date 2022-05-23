@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Build &apos;apikernel\API_118.52x&apos; branch whose GIT log were changed</description>
+  <description>Build &apos;PrdRes\release_v10.118.52&apos; branch whose GIT log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -30,7 +30,6 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -42,14 +41,13 @@ return map</groovyScriptContent>
       <keepJenkinsSystemVariables>true</keepJenkinsSystemVariables>
       <keepBuildVariables>true</keepBuildVariables>
       <overrideBuildParameters>false</overrideBuildParameters>
-      <contributors/>
     </EnvInjectJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition plugin="nodelabelparameter@1.7.2">
           <name></name>
           <description></description>
-          <defaultValue>TESTMAN3_BM</defaultValue>
+          <defaultValue>BM</defaultValue>
           <allNodesMatchingLabel>false</allNodesMatchingLabel>
           <triggerIfResult>allCases</triggerIfResult>
           <nodeEligibility class="org.jvnet.jenkins.plugins.nodelabelparameter.node.AllNodeEligibility"/>
@@ -70,13 +68,13 @@ return map</groovyScriptContent>
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>http://10.10.40.251:30000/CNC/apikernel.git</url>
+        <url>http://10.10.40.251:30000/CNC/Res/PrdRes.git</url>
         <credentialsId>deb8f94b-c883-4da1-beb4-d2b6362b887e</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/API_118.52x</name>
+        <name>*/release_v10.118.52</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -87,7 +85,7 @@ return map</groovyScriptContent>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
-  <assignedNode>TESTMAN3</assignedNode>
+  <assignedNode>BM</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -100,9 +98,7 @@ return map</groovyScriptContent>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
   <builders>
-    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1">
-      <issueSelector class="hudson.plugins.jira.selector.DefaultIssueSelector"/>
-    </hudson.plugins.jira.JiraEnvironmentVariableBuilder>
+    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
       <project>CNC_10.118.52</project>
       <filter>Build/Release/**/CNCSDK*.zip</filter>
@@ -115,26 +111,24 @@ return map</groovyScriptContent>
     <hudson.tasks.BatchFile>
       <command>@echo off&#xd;
 rem normalize working directory&#xd;
-PUSHD %WORKSPACE%\Build&#xd;
+PUSHD %WORKSPACE%\Build\ReleaseRelatedBatch&#xd;
 &#xd;
 echo %CD%&#xd;
 &#xd;
-echo.&gt;temp.txt&#xd;
-echo SET XXOCSDKPOOL=%CD%&gt;&gt;temp.txt&#xd;
-echo.&gt;&gt;temp.txt&#xd;
-copy /y SetProjectEnv.bat+temp.txt SetProjectEnv.bat&#xd;
+call pack-release.bat&#xd;
 &#xd;
-call build-release.bat&#xd;
-&#xd;
-del temp.txt&#xd;
-rd /s /q OCSDK&#xd;
-&#xd;
-for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
-	echo %%~zi&#xd;
-	if %%~zi gtr 0 (&#xd;
-		echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
+if exist &quot;..\Log\check.log&quot; (&#xd;
+	echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
 exit 1&#xd;
 POPD&#xd;
+) else (&#xd;
+	for /F %%i in (&quot;..\Log\checkxml.log&quot;) do (&#xd;
+		echo %%~zi&#xd;
+		if %%~zi gtr 0 (&#xd;
+			echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
+exit 1&#xd;
+POPD&#xd;
+		)&#xd;
 	)&#xd;
 )&#xd;
 POPD&#xd;
@@ -160,7 +154,7 @@ POPD&#xd;
     </hudson.tasks.Fingerprinter>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw swdjojo@gmail.com chieh-hao.chang@syntecclub.com.tw shockspy@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
+      <recipients>evolution6423@yahoo.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw shockspy@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>true</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
@@ -182,7 +176,7 @@ POPD&#xd;
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
     <org.jenkinsci.plugins.environmentdashboard.DashboardBuilder plugin="environment-dashboard@1.1.7">
       <nameOfEnv>SVN Check Build on XP VM</nameOfEnv>
-      <componentName>apikernel</componentName>
+      <componentName>PrdRes</componentName>
       <buildNumber>${BUILD_NUMBER}</buildNumber>
       <buildJob></buildJob>
       <packageName>${XX_BRANCH}</packageName>
