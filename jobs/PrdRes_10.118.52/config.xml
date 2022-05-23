@@ -142,7 +142,7 @@ POPD&#xd;
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>Build/Release/**,Build/error/**</artifacts>
+      <artifacts>Build/Release/**,Build/Log/**</artifacts>
       <allowEmptyArchive>false</allowEmptyArchive>
       <onlyIfSuccessful>false</onlyIfSuccessful>
       <fingerprint>false</fingerprint>
