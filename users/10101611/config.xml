@@ -68,6 +68,8 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20"/>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+      <emailAddress>eric.wang@syntecclub.com.tw</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>
