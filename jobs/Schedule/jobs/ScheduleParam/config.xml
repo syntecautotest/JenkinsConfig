@@ -79,6 +79,7 @@ return map</groovyScriptContent>
             <a class="string-array">
               <string>CNC</string>
               <string>LaserCtrl</string>
+              <string>PrdRes</string>
               <string>API</string>
               <string>MMI</string>
             </a>
