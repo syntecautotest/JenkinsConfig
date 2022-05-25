@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Build &apos;apikernel\API_118.56x&apos; branch whose GIT log were changed</description>
+  <description>Build &apos;apikernel\API_118.60x&apos; branch whose GIT log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -30,11 +30,10 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
-        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.56&quot; ];
+        <groovyScriptContent>def map =  [XX_BRANCH: &quot;10.118.60&quot; ];
 return map</groovyScriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
@@ -42,7 +41,6 @@ return map</groovyScriptContent>
       <keepJenkinsSystemVariables>true</keepJenkinsSystemVariables>
       <keepBuildVariables>true</keepBuildVariables>
       <overrideBuildParameters>false</overrideBuildParameters>
-      <contributors/>
     </EnvInjectJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
@@ -76,7 +74,7 @@ return map</groovyScriptContent>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/API_118.56x</name>
+        <name>*/API_118.60x</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -100,11 +98,9 @@ return map</groovyScriptContent>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
   <builders>
-    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1">
-      <issueSelector class="hudson.plugins.jira.selector.DefaultIssueSelector"/>
-    </hudson.plugins.jira.JiraEnvironmentVariableBuilder>
+    <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38.1">
-      <project>CNC_10.118.56</project>
+      <project>CNC_10.118.60</project>
       <filter>Build/Release/**/CNCSDK*.zip</filter>
       <target>Build/OCSDK</target>
       <excludes></excludes>
