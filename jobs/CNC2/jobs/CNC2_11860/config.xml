@@ -30,7 +30,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -88,7 +87,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
-  <customWorkspace>F:\Jenkins\workspace\CNC2\CNC2_11856</customWorkspace>
+  <customWorkspace>F:\Jenkins\workspace\CNC2\CNC2_11860</customWorkspace>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.tasks.BatchFile>
