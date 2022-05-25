@@ -13,6 +13,7 @@
     <org.jenkins.ci.plugins.html5__notifier.JobPropertyImpl plugin="html5-notifier-plugin@1.5">
       <skip>false</skip>
     </org.jenkins.ci.plugins.html5__notifier.JobPropertyImpl>
+    <com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty plugin="ownership@0.9.1"/>
     <org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty plugin="leastload@1.0.3">
       <leastLoadDisabled>false</leastLoadDisabled>
     </org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty>
@@ -29,7 +30,6 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
@@ -52,30 +52,12 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
-    <com.joelj.jenkins.eztemplates.TemplateImplementationProperty plugin="ez-templates@1.2.5">
-      <templateJobName>CNC_trunk</templateJobName>
-      <syncMatrixAxis>true</syncMatrixAxis>
-      <syncDescription>false</syncDescription>
-      <syncBuildTriggers>true</syncBuildTriggers>
-      <syncDisabled>false</syncDisabled>
-      <syncSecurity>true</syncSecurity>
-      <syncScm>true</syncScm>
-      <syncOwnership>true</syncOwnership>
-      <syncAssignedLabel>true</syncAssignedLabel>
-      <exclusions class="com.google.common.collect.ImmutableList">
-        <string>ez-templates</string>
-        <string>job-params</string>
-        <string>disabled</string>
-        <string>description</string>
-      </exclusions>
-    </com.joelj.jenkins.eztemplates.TemplateImplementationProperty>
-    <com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty plugin="ownership@0.9.1"/>
   </properties>
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/cnckernel/trunk</remote>
-        <credentialsId>1193</credentialsId>
+        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/cnckernel/branches/release_v10.118.60</remote>
+        <credentialsId>b16cae03-3606-4a57-b357-cd297d0594a9</credentialsId>
         <local>.</local>
         <depthOption>infinity</depthOption>
         <ignoreExternalsOption>true</ignoreExternalsOption>
@@ -142,7 +124,7 @@ POPD</command>
     </hudson.tasks.Fingerprinter>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
+      <recipients>evolution6423@yahoo.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
