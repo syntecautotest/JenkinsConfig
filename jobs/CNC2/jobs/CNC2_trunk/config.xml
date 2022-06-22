@@ -87,7 +87,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
-  <customWorkspace>F:\Jenkins\workspace\CNC2\CNC2_trunk</customWorkspace>
+  <customWorkspace>D:\Jenkins\workspace\CNC2\CNC2_trunk</customWorkspace>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.tasks.BatchFile>
