@@ -68,6 +68,7 @@ return map</groovyScriptContent>
               <string>v10_118_52</string>
               <string>v10_118_56</string>
               <string>v10_118_60</string>
+              <string>v10_118_66</string>
               <string>trunk</string>
             </a>
           </choices>
@@ -98,6 +99,7 @@ return map</groovyScriptContent>
         </hudson.model.ChoiceParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
