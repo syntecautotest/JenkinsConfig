@@ -30,7 +30,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -65,7 +64,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/release_CNC2_v10.118.66</name>
+        <name>*/release_CNC2_v10.118.70</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -88,7 +87,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
-  <customWorkspace>D:\Jenkins\workspace\CNC2\CNC2_11866</customWorkspace>
+  <customWorkspace>D:\Jenkins\workspace\CNC2\CNC2_11870</customWorkspace>
   <builders>
     <hudson.plugins.jira.JiraEnvironmentVariableBuilder plugin="jira@2.2.1"/>
     <hudson.tasks.BatchFile>
