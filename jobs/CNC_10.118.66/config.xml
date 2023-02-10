@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>Build &apos;cnckernel\OCKrnl_118.66x&apos; branch whose GIT log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -31,6 +31,15 @@
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
+    <EnvInjectJobProperty plugin="envinject@1.93.1">
+      <info>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+      <on>true</on>
+      <keepJenkinsSystemVariables>true</keepJenkinsSystemVariables>
+      <keepBuildVariables>true</keepBuildVariables>
+      <overrideBuildParameters>false</overrideBuildParameters>
+    </EnvInjectJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition plugin="nodelabelparameter@1.7.2">
@@ -96,7 +105,7 @@ call build-release.bat&#xd;
 for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
 	echo %%~zi&#xd;
 	if %%~zi gtr 0 (&#xd;
-		echo Bulid Failed Due to %SVN_URL% at %SVN_REVISION%&#xd;
+		echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
 exit 1&#xd;
 POPD&#xd;
 	)&#xd;
@@ -153,7 +162,9 @@ POPD</command>
     </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
     <EnvInjectBuildWrapper plugin="envinject@1.93.1">
       <info>
-        <scriptContent>svn log %SVN_URL% -r %SVN_REVISION%</scriptContent>
+        <scriptContent>PUSHD %WORKSPACE%
+git log -1
+POPD</scriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
     </EnvInjectBuildWrapper>
