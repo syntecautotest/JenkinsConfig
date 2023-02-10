@@ -30,7 +30,6 @@
       <throttleOption>category</throttleOption>
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
     <EnvInjectJobProperty plugin="envinject@1.93.1">
       <info>
@@ -69,8 +68,8 @@ return map</groovyScriptContent>
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>http://10.10.40.251:30000/CNC/apikernel.git</url>
-        <credentialsId>deb8f94b-c883-4da1-beb4-d2b6362b887e</credentialsId>
+        <url>https://gitlab.syntecclub.com/ProjectRoot/CNC/apikernel.git</url>
+        <credentialsId>NewGit</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
