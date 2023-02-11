@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>Build &apos;cnckernel\OCKrnl_118.48x&apos; branch whose GIT log were changed</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -31,6 +31,15 @@
       <limitOneJobWithMatchingParams>true</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
+    <EnvInjectJobProperty plugin="envinject@1.93.1">
+      <info>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+      <on>true</on>
+      <keepJenkinsSystemVariables>true</keepJenkinsSystemVariables>
+      <keepBuildVariables>true</keepBuildVariables>
+      <overrideBuildParameters>false</overrideBuildParameters>
+    </EnvInjectJobProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition plugin="nodelabelparameter@1.7.2">
@@ -53,24 +62,22 @@
     </jenkins.model.BuildDiscarderProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
-    <locations>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://developer.syntecclub.com.tw:815/OpenCNC/cnckernel/branches/release_v10.118.48</remote>
-        <credentialsId>b16cae03-3606-4a57-b357-cd297d0594a9</credentialsId>
-        <local>.</local>
-        <depthOption>infinity</depthOption>
-        <ignoreExternalsOption>true</ignoreExternalsOption>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-    </locations>
-    <excludedRegions></excludedRegions>
-    <includedRegions></includedRegions>
-    <excludedUsers></excludedUsers>
-    <excludedRevprop></excludedRevprop>
-    <excludedCommitMessages></excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.UpdateWithCleanUpdater"/>
-    <ignoreDirPropChanges>false</ignoreDirPropChanges>
-    <filterChangelog>false</filterChangelog>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://gitlab.syntecclub.com/ProjectRoot/CNC/cnckernel.git</url>
+        <credentialsId>NewGit</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/OCKrnl_118.48x</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
   </scm>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>3</scmCheckoutRetryCount>
@@ -98,7 +105,7 @@ call build-release.bat&#xd;
 for /F %%i in (&quot;%CD%\error\check.log&quot;) do (&#xd;
 	echo %%~zi&#xd;
 	if %%~zi gtr 0 (&#xd;
-		echo Bulid Failed Due to %SVN_URL% at %SVN_REVISION%&#xd;
+		echo Bulid Failed Due to %GIT_URL% %GIT_BRANCH% at %GIT_COMMIT%&#xd;
 exit 1&#xd;
 POPD&#xd;
 	)&#xd;
@@ -124,7 +131,7 @@ POPD</command>
     </hudson.tasks.Fingerprinter>
     <org.codefirst.jenkins.wsnotifier.WsNotifier plugin="websocket@1.0.6"/>
     <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>yoana.shih@syntecclub.com.tw evolution6423@yahoo.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
+      <recipients>evolution6423@yahoo.com.tw simon@syntecclub.com.tw alpha0729@syntecclub.com.tw chuck.hsu@syntecclub.com.tw</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
@@ -155,7 +162,9 @@ POPD</command>
     </org.jenkinsci.plugins.environmentdashboard.DashboardBuilder>
     <EnvInjectBuildWrapper plugin="envinject@1.93.1">
       <info>
-        <scriptContent>svn log %SVN_URL% -r %SVN_REVISION%</scriptContent>
+        <scriptContent>PUSHD %WORKSPACE%
+git log -1
+POPD</scriptContent>
         <loadFilesFromMaster>false</loadFilesFromMaster>
       </info>
     </EnvInjectBuildWrapper>
