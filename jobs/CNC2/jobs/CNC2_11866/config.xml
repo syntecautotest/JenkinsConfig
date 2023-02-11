@@ -58,8 +58,8 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>http://10.10.40.251:30000/CNC/CNC2.git</url>
-        <credentialsId>deb8f94b-c883-4da1-beb4-d2b6362b887e</credentialsId>
+        <url>https://gitlab.syntecclub.com/ProjectRoot/CNC/CNC2.git</url>
+        <credentialsId>NewGit</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
